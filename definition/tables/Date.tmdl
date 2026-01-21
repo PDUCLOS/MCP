@@ -1,0 +1,56 @@
+table Date
+	lineageTag: 571e20ea-0a1a-49f9-8095-57a5d97350d8
+
+	column Date
+		formatString: dd/mm/yyyy
+		lineageTag: d7766b21-f966-48d0-b23f-13c20f5fc9b4
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Year = YEAR('Date'[Date])
+		formatString: 0
+		lineageTag: 78fdd34e-f079-413b-93f4-0504d95fcc21
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthNum = MONTH('Date'[Date])
+		formatString: 0
+		lineageTag: 0e1d46fc-3178-47ca-b8b0-29ed9d01f3c5
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month = FORMAT('Date'[Date], "YYYY-MM")
+		lineageTag: 2d4f9aa3-2a8b-4073-a441-5cfbb2e6303f
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column WeekStart = 'Date'[Date] - WEEKDAY('Date'[Date], 2) + 1
+		formatString: dd/mm/yyyy
+		lineageTag: b057ac4f-7f32-4dd7-bb87-4aad58474dde
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	partition Date = calculated
+		mode: import
+		source =
+				
+				VAR MinDate = MINX(ALL('Sales Report'), 'Sales Report'[Actual Good Issue Date])
+				VAR MaxDate = TODAY()
+				RETURN
+				CALENDAR(MinDate, MaxDate)
+
+	annotation PBI_Id = 8cd4b29d13cd4c9e8aaacd88964433aa
+

@@ -1,0 +1,25 @@
+relationship c7f33d50-50b7-8aaa-2eb2-8fa029321dd1
+	fromColumn: 'Sales Report'.'Sales Organization'
+	toColumn: GPS.DSO
+
+relationship ec23ca61-cc38-aa48-0da6-69050d9b979d
+	fromColumn: 'Sales Report'.Money
+	toColumn: Taux.MONNAIE
+
+relationship 95b1bb97-2f01-06fd-1354-723d7858a392
+	fromColumn: 'Sales Report'.'ZA:Factory Confirmed date'
+	toColumn: Datum.Date
+
+relationship 1a00cb0c-ceed-4e5b-d0cf-3a55e5b5b64d
+	fromColumn: 'Sales Report'.Material
+	toColumn: Familly.Article
+
+relationship 3319d1ca-0901-3998-d27a-42184a2766a8
+	fromColumn: 'Sales Report'.'Actual Good Issue Date'
+	toColumn: Date.Date
+
+relationship be3bb8c8-5827-de74-74fa-216af58f2324
+	isActive: false
+	fromColumn: 'Sales Report'.'Cust req. Date'
+	toColumn: Date.Date
+

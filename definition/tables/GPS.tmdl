@@ -1,0 +1,78 @@
+table GPS
+	lineageTag: 09c28745-d6b3-4e92-8b6a-bd88a4a0ed39
+
+	column DSO
+		dataType: string
+		lineageTag: 10e177f4-e587-487d-822a-cac41862525f
+		summarizeBy: none
+		sourceColumn: DSO
+
+		annotation SummarizationSetBy = Automatic
+
+	column Long
+		dataType: string
+		lineageTag: 066e642b-ae90-495c-aff3-7ba14dd408dd
+		summarizeBy: none
+		sourceColumn: Long
+
+		annotation SummarizationSetBy = Automatic
+
+	column lat
+		dataType: string
+		lineageTag: 4f6130fb-21ae-4128-a019-a3df0a380f36
+		summarizeBy: none
+		sourceColumn: lat
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: 00491c0b-a73d-4905-999e-2182cc60017e
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column Adresse
+		dataType: string
+		lineageTag: 7f424ccf-e9bc-45cb-974c-56bdf8248173
+		summarizeBy: none
+		sourceColumn: Adresse
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'General Manager'
+		dataType: string
+		lineageTag: 456b695a-bee0-425d-b089-bd296c77abc5
+		summarizeBy: none
+		sourceColumn: General Manager
+
+		annotation SummarizationSetBy = Automatic
+
+	partition GPS = m
+		mode: import
+		source =
+				let
+				    Source = SharePoint.Files("https://carcgl.sharepoint.com/sites/MD_Power_BI", [ApiVersion = 15]),
+				    #"Lignes filtrées1" = Table.SelectRows(Source, each ([Folder Path] = "https://carcgl.sharepoint.com/sites/MD_Power_BI/Shared Documents/chantier/20_ Customer Care/10_Customer Care KPI Dashboard/20_Tables/")),
+				    #"Lignes filtrées" = Table.SelectRows(#"Lignes filtrées1", each ([Name] = "Localisation_Customer_Care.csv")),
+				    #"Fichiers masqués filtrés1" = Table.SelectRows(#"Lignes filtrées", each [Attributes]?[Hidden]? <> true),
+				    #"Appeler une fonction personnalisée1" = Table.AddColumn(#"Fichiers masqués filtrés1", "Transformer le fichier (4)", each #"Transformer le fichier (4)"([Content])),
+				    #"Colonnes renommées1" = Table.RenameColumns(#"Appeler une fonction personnalisée1", {"Name", "Source.Name"}),
+				    #"Fichiers masqués filtrés2" = Table.SelectRows(#"Colonnes renommées1", each [Attributes]?[Hidden]? <> true),
+				    #"Appeler une fonction personnalisée2" = Table.AddColumn(#"Fichiers masqués filtrés2", "Transformer le fichier (6)", each #"Transformer le fichier (6)"([Content])),
+				    #"Autres colonnes supprimées1" = Table.SelectColumns(#"Appeler une fonction personnalisée2", {"Transformer le fichier (6)"}),
+				    #"Colonne de tables développée1" = Table.ExpandTableColumn(#"Autres colonnes supprimées1", "Transformer le fichier (6)", Table.ColumnNames(#"Transformer le fichier (6)"(#"Exemple de fichier (6)"))),
+				    #"Type modifié" = Table.TransformColumnTypes(#"Colonne de tables développée1",{{"Column1", type text}, {"Column2", type text}, {"Column3", type text}, {"Column4", type text}}),
+				    #"En-têtes promus" = Table.PromoteHeaders(#"Type modifié", [PromoteAllScalars=true]),
+				    #"Type modifié1" = Table.TransformColumnTypes(#"En-têtes promus",{{"DSO", type text}, {"GPS", type text}, {"Country", type text}, {"Adresse", type text}}),
+				    #"Fractionner la colonne par délimiteur" = Table.SplitColumn(#"Type modifié1", "GPS", Splitter.SplitTextByDelimiter(",", QuoteStyle.Csv), {"GPS.1", "GPS.2"}),
+				    #"Type modifié2" = Table.TransformColumnTypes(#"Fractionner la colonne par délimiteur",{{"GPS.1", type text}, {"GPS.2", type text}}),
+				    #"Colonnes renommées" = Table.RenameColumns(#"Type modifié2",{{"GPS.1", "Long"}, {"GPS.2", "lat"}})
+				in
+				    #"Colonnes renommées"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

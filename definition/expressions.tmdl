@@ -1,0 +1,283 @@
+expression 'Exemple de fichier' =
+		let
+		    Source = SharePoint.Files("https://carcgl.sharepoint.com/sites/MD_Power_BI", [ApiVersion = 15]),
+		    #"Lignes filtrées1" = Table.SelectRows(Source, each ([Folder Path] = "https://carcgl.sharepoint.com/sites/MD_Power_BI/Shared Documents/chantier/20_ Customer Care/01_MAIN_Table/20_Avail_Sales_Report_All_Suppliers/")),
+		    Navigation1 = #"Lignes filtrées1"{0}[Content]
+		in
+		    Navigation1
+	lineageTag: 7cdbe19d-e719-4c20-a83d-08c7f08b5a6b
+	queryGroup: 'Transformer le fichier à partir de Requête1\Requêtes d''assistance'
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Binary
+
+expression Paramètre1 = #"Exemple de fichier" meta [IsParameterQuery=true, BinaryIdentifier=#"Exemple de fichier", Type="Binary", IsParameterQueryRequired=true]
+	lineageTag: 22f1c159-6e44-4e05-95a9-3c8a7eb871d3
+	queryGroup: 'Transformer le fichier à partir de Requête1\Requêtes d''assistance'
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Binary
+
+expression 'Transformer l''exemple de fichier' =
+		let
+		    Source = Csv.Document(Paramètre1,[Delimiter="|", Columns=179, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+		    #"En-têtes promus" = Table.PromoteHeaders(Source, [PromoteAllScalars=true])
+		in
+		    #"En-têtes promus"
+	lineageTag: 3739ca48-6e3f-47a2-bf5a-8463a400ce99
+	queryGroup: 'Transformer le fichier à partir de Requête1'
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+
+expression 'Transformer le fichier' =
+		let
+		    Source = (Paramètre1 as binary) => let
+		    Source = Csv.Document(Paramètre1,[Delimiter="|", Columns=179, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+		    #"En-têtes promus" = Table.PromoteHeaders(Source, [PromoteAllScalars=true])
+		in
+		    #"En-têtes promus"
+		in
+		    Source
+	lineageTag: c9eddcaf-64b6-4280-a94a-9c9cfe18e448
+	queryGroup: 'Transformer le fichier à partir de Requête1\Requêtes d''assistance'
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Function
+
+expression 'Exemple de fichier (3)' =
+		let
+		    Source = SharePoint.Files("https://carcgl.sharepoint.com/sites/MD_Power_BI", [ApiVersion = 15]),
+		    #"Lignes filtrées" = Table.SelectRows(Source, each ([Name] = "Localisation_Customer_Care.csv")),
+		    Navigation1 = #"Lignes filtrées"{0}[Content]
+		in
+		    Navigation1
+	lineageTag: c06467f2-0928-4038-9a5a-e6c7d3dcf732
+	queryGroup: 'Transformer le fichier à partir de Requête1 (2)\Requêtes d''assistance'
+
+	annotation PBI_ResultType = Binary
+
+	annotation PBI_NavigationStepName = Navigation
+
+expression Paramètre3 = #"Exemple de fichier (3)" meta [IsParameterQuery=true, BinaryIdentifier=#"Exemple de fichier (3)", Type="Binary", IsParameterQueryRequired=true]
+	lineageTag: ebb0fb25-94c2-4372-9ae1-33c4b7b8c6ed
+	queryGroup: 'Transformer le fichier à partir de Requête1 (2)\Requêtes d''assistance'
+
+	annotation PBI_ResultType = Binary
+
+	annotation PBI_NavigationStepName = Navigation
+
+expression 'Transformer l''exemple de fichier (3)' =
+		let
+		    Source = Csv.Document(Paramètre3,[Delimiter="	", Columns=3, Encoding=1252, QuoteStyle=QuoteStyle.None])
+		in
+		    Source
+	lineageTag: 71881fdb-9869-4386-9102-451c651e9649
+	queryGroup: 'Transformer le fichier à partir de Requête1 (2)'
+
+	annotation PBI_ResultType = Table
+
+expression 'Transformer le fichier (3)' =
+		let
+		    Source = (Paramètre3 as binary) => let
+		    Source = Csv.Document(Paramètre3,[Delimiter="	", Columns=3, Encoding=1252, QuoteStyle=QuoteStyle.None])
+		in
+		    Source
+		in
+		    Source
+	lineageTag: b630338b-e982-4b77-a3fc-f910a93118f9
+	queryGroup: 'Transformer le fichier à partir de Requête1 (2)\Requêtes d''assistance'
+
+	annotation PBI_ResultType = Function
+
+expression 'Exemple de fichier (4)' =
+		let
+		    Source = SharePoint.Files("https://carcgl.sharepoint.com/sites/MD_Power_BI", [ApiVersion = 15]),
+		    #"Lignes filtrées" = Table.SelectRows(Source, each ([Name] = "Localisation_Customer_Care.csv")),
+		    Navigation1 = #"Lignes filtrées"{0}[Content]
+		in
+		    Navigation1
+	lineageTag: 6cd875b5-62a4-4438-a801-0e3dfc1f22bf
+	queryGroup: 'Transformer le fichier à partir de Requête1 (3)\Requêtes d''assistance'
+
+	annotation PBI_ResultType = Binary
+
+	annotation PBI_NavigationStepName = Navigation
+
+expression Paramètre4 = #"Exemple de fichier (4)" meta [IsParameterQuery=true, BinaryIdentifier=#"Exemple de fichier (4)", Type="Binary", IsParameterQueryRequired=true]
+	lineageTag: 95fac8c2-edf8-4fbd-9e2e-5d345c4a4bc4
+	queryGroup: 'Transformer le fichier à partir de Requête1 (3)\Requêtes d''assistance'
+
+	annotation PBI_ResultType = Binary
+
+expression 'Transformer l''exemple de fichier (4)' =
+		let
+		    Source = Csv.Document(Paramètre4,[Delimiter=";", Columns=5, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+		    #"Type modifié" = Table.TransformColumnTypes(Source,{{"Column1", type text}, {"Column2", type text}, {"Column3", type text}, {"Column4", type text}, {"Column5", type text}})
+		in
+		    #"Type modifié"
+	lineageTag: 4a2ef180-b855-4a77-ab6e-97043dcaf73a
+	queryGroup: 'Transformer le fichier à partir de Requête1 (3)'
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+
+expression 'Transformer le fichier (4)' =
+		let
+		    Source = (Paramètre4 as binary) => let
+		    Source = Csv.Document(Paramètre4,[Delimiter=";", Columns=3, Encoding=65001, QuoteStyle=QuoteStyle.None])
+		in
+		    Source
+		in
+		    Source
+	lineageTag: cb434724-a5ed-4f2b-8560-94e018883ccc
+	queryGroup: 'Transformer le fichier à partir de Requête1 (3)\Requêtes d''assistance'
+
+	annotation PBI_ResultType = Function
+
+expression 'Exemple de fichier (5)' =
+		let
+		    Source = SharePoint.Files("https://carcgl.sharepoint.com/sites/MD_Power_BI", [ApiVersion = 15]),
+		    #"Lignes filtrées" = Table.SelectRows(Source, each ([Name] = "Taux de change_Customer_Care.csv")),
+		    Navigation1 = #"Lignes filtrées"{0}[Content]
+		in
+		    Navigation1
+	lineageTag: e894f503-a08c-4fa1-ad37-d1c2851321cd
+	queryGroup: 'Transformer le fichier à partir de Requête1 (4)\Requêtes d''assistance'
+
+	annotation PBI_ResultType = Binary
+
+	annotation PBI_NavigationStepName = Navigation
+
+expression Paramètre5 = #"Exemple de fichier (5)" meta [IsParameterQuery=true, BinaryIdentifier=#"Exemple de fichier (5)", Type="Binary", IsParameterQueryRequired=true]
+	lineageTag: 92563ca9-c932-4d6a-83c2-0bc1762c89b3
+	queryGroup: 'Transformer le fichier à partir de Requête1 (4)\Requêtes d''assistance'
+
+	annotation PBI_ResultType = Binary
+
+expression 'Transformer l''exemple de fichier (5)' =
+		let
+		    Source = Csv.Document(Paramètre5,[Delimiter=";", Columns=2, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+		    #"En-têtes promus" = Table.PromoteHeaders(Source, [PromoteAllScalars=true])
+		in
+		    #"En-têtes promus"
+	lineageTag: d9c3c55d-a7b7-4b1e-ac79-4d884bc80aab
+	queryGroup: 'Transformer le fichier à partir de Requête1 (4)'
+
+	annotation PBI_ResultType = Table
+
+expression 'Transformer le fichier (5)' =
+		let
+		    Source = (Paramètre5) => let
+		        Source = Csv.Document(Paramètre5,[Delimiter=";", Columns=2, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+		        #"En-têtes promus" = Table.PromoteHeaders(Source, [PromoteAllScalars=true])
+		    in
+		        #"En-têtes promus"
+		in
+		    Source
+	lineageTag: ff701bec-edab-4a1d-8a67-41f206f94055
+	queryGroup: 'Transformer le fichier à partir de Requête1 (4)\Requêtes d''assistance'
+
+	annotation PBI_ResultType = Function
+
+expression 'Exemple de fichier (6)' =
+		let
+		    Source = SharePoint.Files("https://carcgl.sharepoint.com/sites/MD_Power_BI", [ApiVersion = 15]),
+		    #"Lignes filtrées" = Table.SelectRows(Source, each ([Name] = "Localisation_Customer_Care.csv")),
+		    #"Fichiers masqués filtrés1" = Table.SelectRows(#"Lignes filtrées", each [Attributes]?[Hidden]? <> true),
+		    #"Appeler une fonction personnalisée1" = Table.AddColumn(#"Fichiers masqués filtrés1", "Transformer le fichier (4)", each #"Transformer le fichier (4)"([Content])),
+		    #"Colonnes renommées1" = Table.RenameColumns(#"Appeler une fonction personnalisée1", {"Name", "Source.Name"}),
+		    Navigation1 = #"Colonnes renommées1"{0}[Content]
+		in
+		    Navigation1
+	lineageTag: 1c754a8b-f288-4d91-85b6-34bc0c2adec0
+	queryGroup: 'Transformer le fichier à partir de GPS\Requêtes d''assistance'
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Binary
+
+expression Paramètre6 = #"Exemple de fichier (6)" meta [IsParameterQuery=true, BinaryIdentifier=#"Exemple de fichier (6)", Type="Binary", IsParameterQueryRequired=true]
+	lineageTag: 485fd2e2-9b6b-480a-a384-fe9596883fc0
+	queryGroup: 'Transformer le fichier à partir de GPS\Requêtes d''assistance'
+
+	annotation PBI_ResultType = Binary
+
+expression 'Transformer l''exemple de fichier (6)' =
+		let
+		    Source = Csv.Document(Paramètre6,[Delimiter=";", Columns=5, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+		    #"Type modifié" = Table.TransformColumnTypes(Source,{{"Column1", type text}, {"Column2", type text}, {"Column3", type text}, {"Column4", type text}, {"Column5", type text}})
+		in
+		    #"Type modifié"
+	lineageTag: fa04ec6e-2dd2-45c5-bb4c-8ae3ec741c75
+	queryGroup: 'Transformer le fichier à partir de GPS'
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+
+expression 'Transformer le fichier (6)' =
+		let
+		    Source = (Paramètre6 as binary) => let
+		    Source = Csv.Document(Paramètre6,[Delimiter=";", Columns=5, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+		    #"Type modifié" = Table.TransformColumnTypes(Source,{{"Column1", type text}, {"Column2", type text}, {"Column3", type text}, {"Column4", type text}, {"Column5", type text}})
+		in
+		    #"Type modifié"
+		in
+		    Source
+	lineageTag: cfebfaf5-af97-4da6-90c8-5aa6c501f641
+	queryGroup: 'Transformer le fichier à partir de GPS\Requêtes d''assistance'
+
+	annotation PBI_ResultType = Function
+
+expression 'Exemple de fichier (7)' =
+		let
+		    Source = SharePoint.Files("https://carcgl.sharepoint.com/sites/MD_Power_BI", [ApiVersion = 15]),
+		    #"Lignes filtrées" = Table.SelectRows(Source, each ([Name] = "calendar_working_days_france_Customer_Care.csv")),
+		    Navigation1 = #"Lignes filtrées"{0}[Content]
+		in
+		    Navigation1
+	lineageTag: a9a0201c-a9c4-495c-9fb4-9ff5e7fd2bd0
+	queryGroup: 'Transformer le fichier à partir de Requête1\Requêtes d''assistance\Transformer le fichier à partir de Requête1\Requêtes d''assistance'
+
+	annotation PBI_ResultType = Binary
+
+	annotation PBI_NavigationStepName = Navigation
+
+expression Paramètre7 = #"Exemple de fichier (7)" meta [IsParameterQuery=true, BinaryIdentifier=#"Exemple de fichier (7)", Type="Binary", IsParameterQueryRequired=true]
+	lineageTag: 565bf70a-c2d4-4227-903f-561220887494
+	queryGroup: 'Transformer le fichier à partir de Requête1\Requêtes d''assistance\Transformer le fichier à partir de Requête1\Requêtes d''assistance'
+
+	annotation PBI_ResultType = Binary
+
+expression 'Transformer l''exemple de fichier (7)' =
+		let
+		    Source = Csv.Document(Paramètre7,[Delimiter=",", Columns=2, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+		    #"En-têtes promus" = Table.PromoteHeaders(Source, [PromoteAllScalars=true])
+		in
+		    #"En-têtes promus"
+	lineageTag: cc0ba357-5f6d-4322-9866-0c6af3a0e501
+	queryGroup: 'Transformer le fichier à partir de Requête1\Requêtes d''assistance\Transformer le fichier à partir de Requête1'
+
+	annotation PBI_ResultType = Table
+
+expression 'Transformer le fichier (7)' =
+		let
+		    Source = (Paramètre7 as binary) => let
+		    Source = Csv.Document(Paramètre7,[Delimiter=",", Columns=2, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+		    #"En-têtes promus" = Table.PromoteHeaders(Source, [PromoteAllScalars=true])
+		in
+		    #"En-têtes promus"
+		in
+		    Source
+	mAttributes: [ FunctionQueryBinding = "{""exemplarFormulaName"":""Transformer l\u0027exemple de fichier (7)""}" ]
+	lineageTag: 01f66130-83e2-49a7-a44f-479182b40fc0
+	queryGroup: 'Transformer le fichier à partir de Requête1\Requêtes d''assistance\Transformer le fichier à partir de Requête1\Requêtes d''assistance'
+
+	annotation PBI_ResultType = Function
+

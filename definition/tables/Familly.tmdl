@@ -1,0 +1,38 @@
+table Familly
+	lineageTag: 1a0e5459-06c2-41b8-8873-425c03b110a1
+
+	column Article
+		dataType: string
+		lineageTag: df12914e-19f6-4a5f-96a6-ffbe9aaded4a
+		summarizeBy: none
+		sourceColumn: Article
+
+		annotation SummarizationSetBy = Automatic
+
+	column Famille
+		dataType: string
+		lineageTag: 98f5f0fb-1cd1-4dd4-93f8-eb3857eccdfe
+		summarizeBy: none
+		sourceColumn: Famille
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Familly = m
+		mode: import
+		source =
+				let
+				    Source = SharePoint.Files("https://carcgl.sharepoint.com/sites/MD_Power_BI", [ApiVersion = 15]),
+				    #"Lignes filtrées" = Table.SelectRows(Source, each ([Name] = "Famille et material group.xlsx")),
+				    #"Famille et material group xlsx_https://carcgl sharepoint com/sites/MD_Power_BI/Shared Documents/chantier/20_ Customer Care/10_Customer Care KPI Dashboard/20_Tables/" = #"Lignes filtrées"{[Name="Famille et material group.xlsx",#"Folder Path"="https://carcgl.sharepoint.com/sites/MD_Power_BI/Shared Documents/chantier/20_ Customer Care/10_Customer Care KPI Dashboard/20_Tables/"]}[Content],
+				    #"Classeur Excel importé" = Excel.Workbook(#"Famille et material group xlsx_https://carcgl sharepoint com/sites/MD_Power_BI/Shared Documents/chantier/20_ Customer Care/10_Customer Care KPI Dashboard/20_Tables/"),
+				    Famille_Sheet = #"Classeur Excel importé"{[Item="Famille",Kind="Sheet"]}[Data],
+				    #"En-têtes promus" = Table.PromoteHeaders(Famille_Sheet, [PromoteAllScalars=true]),
+				    Personnalisé1 = #"En-têtes promus",
+				    #"Lignes vides supprimées" = Table.SelectRows(Personnalisé1, each not List.IsEmpty(List.RemoveMatchingItems(Record.FieldValues(_), {"", null})))
+				in
+				    #"Lignes vides supprimées"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

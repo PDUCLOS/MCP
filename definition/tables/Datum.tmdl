@@ -1,0 +1,187 @@
+table Datum
+	lineageTag: 1fc2f84d-afa9-4caa-a21c-b6415701a6ee
+
+	column Date
+		formatString: General Date
+		lineageTag: 76450e56-36f3-4046-938c-510426f9e6d3
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Annee
+		lineageTag: 7e5e076f-26e2-4d73-83f7-417c638803c3
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Annee]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Trimestre
+		lineageTag: 297a5dd7-953b-4b0b-85b1-10a54abbffed
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Trimestre]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Numero du mois'
+		formatString: 0
+		lineageTag: dd18da1d-53b9-4933-8070-5f73bc1280cf
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Numero du mois]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mois
+		lineageTag: 7ca1df8c-080e-4ebe-951c-11ef4a03f97c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Mois]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Annee mois'
+		lineageTag: 967ebf06-1f01-4a59-bd2b-3ff454ae77ef
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Annee mois]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nom du mois'
+		lineageTag: 344b16d9-2538-4afa-9a27-1e3ad0d9b33e
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Nom du mois]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nom court du mois'
+		lineageTag: c7a8c820-ac3d-4ab0-9e29-ffad8c8e0f94
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Nom court du mois]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Semaine
+		lineageTag: 3a152206-0219-4a8d-ae3b-79b3a81a9f6c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Semaine]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Semaine ISO'
+		lineageTag: d232c4e3-7ca8-48c1-89b9-3bb662bdfa1e
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Semaine ISO]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Annee_Sem_ISO
+		lineageTag: 76357977-616b-4b18-a717-7cefb61bc075
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Annee_Sem_ISO]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Numero du jour'
+		formatString: 0
+		lineageTag: efcb5afe-b9a6-4e06-8599-a35b4e2bb2e0
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Numero du jour]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nom du jour'
+		lineageTag: 81ddc3d0-0d7b-45fa-b94f-3634b72ffcb8
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Nom du jour]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Jour ouvre'
+		lineageTag: 3db04efd-fd35-466c-b43e-47869329d325
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Jour ouvre]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Datum = calculated
+		mode: import
+		source = ```
+				
+				/* 
+				Script pour vous ! votre ami UCEF °.°
+				***
+				Pour utiliser ce script, penser à préciser date de début et de fin (voir section variables).
+				    Date de début et date de fin peuvent être calculées dynamiquement à partir de la date principale ('Date1') et la fonction CALENDAR. 
+				        CALENDAR ( DATE ( YEAR ( MIN ( Date1 ) ) , 1 , 1 ),
+				                   DATE ( YEAR ( MAX ( Date1 ) ) , 12 , 31 ) )
+				    Dans ce cas, il convient d'ignorer la section VAR et de remplacer la fonction CALENDAR ligne 26 par les lignes ci-dessus.
+				Après sa creation, trier la table en fonction de la colonne [Date] - question de confort. 
+				Dans l'onglet Modélisation, marquer la table comme table de date
+				    et utiliser la fonction Trier par colonne pour :
+				        - trier la colonne Nom du mois par la colonne Année mois
+				        - trier la colonne Nom court du mois par la colonne Année mois
+				        - trier la colonne Mois par la colonne Numéro du mois
+				        - trier la colonne Nom du jour par la colonne Numéro du jour
+				    De plus, vous pouvez modifier le format du champ Date (par ex. dd/MM/yy) pour ne pas avoir les heures affichées.
+				Dans la vue Modèle, lier Datum à la table des faits contenant les dates de transactions, 
+				    en définissant la liaison active sur la date la plus importante
+				    et le cas écheant des liaisons inactives sur les autres dates utiles
+				    (ou dupliquez la table Datum avec la formule-type Datum2 = Datum).
+				Enfin il est conseillé de masquer les champs de type Date liés à la table Datum
+				    et de masquer les champs Numéro du jour et du mois de la table Datum.
+				***
+				Remarque: dans l'état actuel, les jours feriés n'apparaissent pas dans ce script - à suivre.
+				 */
+				
+				VAR DebDate = DATE(2020,1,1)
+				VAR FinDate = DATE(2050,1,1)
+				RETURN
+				ADDCOLUMNS(CALENDAR(DebDate,FinDate),
+				           "Annee", FORMAT([Date],"YYYY"),
+				           "Trimestre" , "T"&FORMAT([Date],"Q"),
+				           "Numero du mois", MONTH([Date]),
+				           "Mois", "M"&FORMAT([Date],"M"),
+				           "Annee mois", FORMAT([Date],"YYYY-MM"),
+				           "Nom du mois", FORMAT([Date],"MMMM YY") ,
+				           "Nom court du mois", FORMAT([Date],"MMM YY") ,
+				           "Semaine" , "S" & FORMAT(WEEKNUM([Date],2),"00"),
+				-- mise en place de la semaine ISO 8601 (WEEKNUM([Date],21)
+				           "Semaine ISO" , "W" & FORMAT(WEEKNUM([Date],21),"00") ,
+				-- mise en place de la colonne année-semaine ISO (pour le cumul hebdomadaire)
+				           "Annee_Sem_ISO" , VAR An = YEAR([Date]) 
+				                             VAR Sem = WEEKNUM([Date],2) 
+				                             VAR SemISO = WEEKNUM([Date],21) RETURN
+				                            IF( 
+				                                AND (SemISO < 5, Sem > 50),
+				                                An+1,
+				                                IF(
+				                                    AND (SemISO > 50, Sem < 5),
+				                                    An-1,
+				                                    An
+				                                )
+				                            ) 
+				                            & "-W" & FORMAT(SemISO,"00") ,
+				           "Numero du jour" , WEEKDAY([Date],2),
+				           "Nom du jour", FORMAT([Date],"DDDD"),
+				           "Jour ouvre" , IF(WEEKDAY([Date],2)<6,"Ouvre","Week-end")
+				)
+				
+				
+				
+				```
+
+	annotation PBI_Id = 5aa4ef365fdd4d74823600d0a2822caf
+

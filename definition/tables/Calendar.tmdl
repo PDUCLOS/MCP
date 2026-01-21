@@ -1,0 +1,57 @@
+table Calendar
+	lineageTag: bdf5de8e-1953-4a28-b0e0-1cdfa558d4b9
+
+	column 'Source.Name'
+		dataType: string
+		lineageTag: 35676030-c0a0-48c6-ac59-27d64f83ff57
+		summarizeBy: none
+		sourceColumn: Source.Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: dcce130c-5cf5-4f72-aefd-615b6903d681
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column IsWorkingDay
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 6e78ec28-07b5-49e4-a086-9606e5df7ff0
+		summarizeBy: none
+		sourceColumn: IsWorkingDay
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month = FORMAT('Calendar'[Date], "YYYY-MM")
+		lineageTag: 31fd2764-6a96-4f5a-8400-3e27045942f2
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Calendar = m
+		mode: import
+		source =
+				let
+				    Source = SharePoint.Files("https://carcgl.sharepoint.com/sites/MD_Power_BI", [ApiVersion = 15]),
+				    #"Lignes filtrées1" = Table.SelectRows(Source, each ([Folder Path] = "https://carcgl.sharepoint.com/sites/MD_Power_BI/Shared Documents/chantier/20_ Customer Care/10_Customer Care KPI Dashboard/20_Tables/")),
+				    #"Lignes filtrées" = Table.SelectRows(#"Lignes filtrées1", each ([Folder Path] = "https://carcgl.sharepoint.com/sites/MD_Power_BI/Shared Documents/chantier/20_ Customer Care/10_Customer Care KPI Dashboard/20_Tables/") and ([Name] = "calendar_working_days_france_Customer_Care.csv")),
+				    #"Fichiers masqués filtrés1" = Table.SelectRows(#"Lignes filtrées", each [Attributes]?[Hidden]? <> true),
+				    #"Appeler une fonction personnalisée1" = Table.AddColumn(#"Fichiers masqués filtrés1", "Transformer le fichier (7)", each #"Transformer le fichier (7)"([Content])),
+				    #"Colonnes renommées1" = Table.RenameColumns(#"Appeler une fonction personnalisée1", {"Name", "Source.Name"}),
+				    #"Autres colonnes supprimées1" = Table.SelectColumns(#"Colonnes renommées1", {"Source.Name", "Transformer le fichier (7)"}),
+				    #"Colonne de tables développée1" = Table.ExpandTableColumn(#"Autres colonnes supprimées1", "Transformer le fichier (7)", Table.ColumnNames(#"Transformer le fichier (7)"(#"Exemple de fichier (7)"))),
+				    #"Type modifié" = Table.TransformColumnTypes(#"Colonne de tables développée1",{{"Source.Name", type text}, {"Date", type date}, {"IsWorkingDay", type logical}})
+				in
+				    #"Type modifié"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

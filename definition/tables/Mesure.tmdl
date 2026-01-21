@@ -1,0 +1,380 @@
+table Mesure
+	lineageTag: e594f433-48af-4aff-ba6b-4013647d6fc9
+
+	measure 'Net Value ZB True' = CALCULATE(SUM('Sales Report'[Net Value]), 'Sales Report'[ZB Current month T/F] = TRUE())
+		formatString: 0
+		lineageTag: d3479578-f4ca-4f6b-b9de-bc034b33b882
+
+	measure 'Planned Goods Issue in the current month' = CALCULATE(SUM('Sales Report'[Net Value]), 'Sales Report'[Planned Goods Issue Current month T/F] = TRUE())
+		lineageTag: 9a50aedf-e8fa-4c19-a112-9e367d8a2cdb
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Invoiced current month' = CALCULATE(SUM('Sales Report'[Net Value]), 'Sales Report'[Invoiced Date Current month T/F] = TRUE())
+		lineageTag: 38baec91-eddd-40a3-b7f2-5676d9b70d13
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Value normaly invoiced' = [Invoiced current month] + [Planned Goods Issue in the current month]
+		lineageTag: 8e451382-78ad-430d-9b27-bf5de8db8eef
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Mesure_Mois_En_Cours = ```
+			
+			VAR MoisActuel = MONTH(TODAY())
+			VAR AnneeActuelle = YEAR(TODAY())
+			RETURN
+			CALCULATE(
+			    COUNTROWS('Sales Report'),
+			    FILTER(
+			        'Sales Report',
+			        'Sales Report'[ZA:Factory Confirmed date] <> BLANK()
+			        && 'Sales Report'[ZB:Last Availability Date Confirmed] <> BLANK()
+			        && MONTH('Sales Report'[ZA:Factory Confirmed date]) = MoisActuel
+			        && YEAR('Sales Report'[ZA:Factory Confirmed date]) = AnneeActuelle
+			        && MONTH('Sales Report'[ZB:Last Availability Date Confirmed]) = MoisActuel
+			        && YEAR('Sales Report'[ZB:Last Availability Date Confirmed]) = AnneeActuelle
+			        && ISBLANK('Sales Report'[Actual Good Issue Date])
+			    )
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 1677cd27-4430-462d-977e-aeb61468e76c
+
+	measure 'Value Négociale' = ```
+			
+			VAR ValeurBrut =
+			    CALCULATE (
+			        SUM ( 'Sales Report'[Net Value] ),
+			        'Sales Report'[ZD Current month T/F] = TRUE,
+			        'Sales Report'[Actuel Good Issue T/F] = FALSE
+			    )
+			VAR ValeurCurrentBacklog =
+			    CALCULATE (
+			        SUM ( 'Sales Report'[Net Value] ),
+			        'Sales Report'[ZD Current Month T/F] = TRUE,
+			        'Sales Report'[ZB Current month T/F] = TRUE,
+			        'Sales Report'[Actuel Good Issue T/F] = FALSE()
+			    )
+			RETURN
+			    ValeurBrut - ValeurCurrentBacklog
+			
+			```
+		lineageTag: 172b7992-14e1-449a-926e-dd85c405066e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure ValeurBrut = ```
+			
+			CALCULATE (
+			    SUM ( 'Sales Report'[Net value Euros] ),
+			    'Sales Report'[Actuel Good Issue T/F] = FALSE,
+			    NOT ISBLANK('Sales Report'[ZD:Stock Availability Date])
+			)
+			
+			```
+		lineageTag: 7927abf2-557f-4a64-97df-55d0e3ff3834
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure ValeurCurrentBacklog = ```
+			
+			    CALCULATE (
+			        SUM ( 'Sales Report'[Net Value] ),
+			        'Sales Report'[ZD Current Month T/F] = TRUE,
+			        'Sales Report'[ZB Current month T/F] = TRUE,
+			        'Sales Report'[Actuel Good Issue T/F] = FALSE())
+			```
+		lineageTag: a1a2b319-d92b-49c1-aeea-6ec9b00f1fe6
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Backlog Current Month ZA_ZB' = ```
+			
+			CALCULATE (
+			    SUM ( 'Sales Report'[Net Value] ),
+			    FILTER (
+			        'Sales Report',
+			        (
+			            'Sales Report'[ZA Current Month T/F] = TRUE
+			            || 'Sales Report'[ZB Current month T/F] = TRUE
+			            || NOT ISBLANK('Sales Report'[ZD:Stock Availability Date])
+			        )
+			        && 'Sales Report'[Actuel Good Issue T/F] = FALSE
+			    )
+			)
+			
+			```
+		lineageTag: 95a8ee6c-f22d-41ae-90ba-9e4e2dd7f300
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Net Value Cumulative' = ```
+			
+			CALCULATE(
+			    SUM('Sales Report'[Net Value]),
+			    FILTER(
+			        ALLSELECTED('Sales Report'[Actual Good Issue Date]),
+			        'Sales Report'[Actual Good Issue Date] <= MAX('Sales Report'[Actual Good Issue Date])
+			    )
+			)
+			
+			```
+		lineageTag: f86112a3-e7ad-4ebf-8870-fade31ec0110
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Net Value Planned good Issue' =
+			
+			CALCULATE(
+			    SUM('Sales Report'[Net Value]),
+			    FILTER(
+			        ALLSELECTED('Sales Report'[Planned Goods Issue Date]),
+			        'Sales Report'[Planned Goods Issue Date] <= MAX('Sales Report'[Planned Goods Issue Date])
+			    )
+			)
+		lineageTag: 57195898-6311-44a4-8368-adc5a60d61b7
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Net Value Required DSO/JV' =
+			
+			CALCULATE(
+			    SUM('Sales Report'[Net Value]),
+			    FILTER(
+			        ALLSELECTED('Sales Report'[Required DSO / JV Date on site]),
+			        'Sales Report'[Required DSO / JV Date on site] <= MAX('Sales Report'[Required DSO / JV Date on site])))
+		lineageTag: 8046f316-1f88-4e3a-8d0f-9e66802294b7
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Opportunity Business' = ```
+			
+			CALCULATE (
+			    SUM ( 'Sales Report'[Net value Euros] ),
+			    'Sales Report'[ZB:Last Availability Date Confirmed] > EOMONTH(TODAY(), 0),
+			    'Sales Report'[ZA:Factory Confirmed date] > EOMONTH(TODAY(), 0),
+			    MONTH('Sales Report'[ZD:Stock Availability Date]) = MONTH(TODAY()) &&
+			    YEAR('Sales Report'[ZD:Stock Availability Date]) = YEAR(TODAY())
+			)
+			
+			
+			```
+		lineageTag: fa86a6d1-e7a7-47b4-a0a1-d9f07f1fa223
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Orders On Time' = ```
+			
+			VAR CurrentGroup = SELECTEDVALUE('Sales Report'[OBD Month Year Date])
+			VAR OrdersInGroup =
+			    FILTER(
+			        ALL('Sales Report'),
+			        'Sales Report'[OBD Month Year Date] = CurrentGroup
+			    )
+			VAR TotalOrders = COUNTROWS(OrdersInGroup)
+			VAR OnTimeOrders =
+			    COUNTROWS(
+			        FILTER(
+			            OrdersInGroup,
+			            NOT ISBLANK('Sales Report'[ZD:Stock Availability Date]) &&
+			            'Sales Report'[Working Days Diff Ana] <= 0
+			        )
+			    )
+			RETURN
+			    DIVIDE(OnTimeOrders, TotalOrders, 0)
+			
+			```
+		lineageTag: 123859c7-6f88-49cd-a12f-494920a2d754
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Qty On Time' = ```
+			
+			CALCULATE(
+			    SUM('Sales Report'[Del Confirm Quantity]),
+			    FILTER(
+			        'Sales Report',
+			        NOT(ISBLANK('Sales Report'[ZD:Stock Availability Date])) &&
+			        'Sales Report'[Working Days Diff Ana new] <= 0
+			    )
+			)
+			
+			```
+		lineageTag: 87b196bb-5cbd-4e98-958a-f229844b6529
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Qty Delayed' = ```
+			
+			CALCULATE(
+			    SUM('Sales Report'[Del Confirm Quantity]),
+			    FILTER(
+			        'Sales Report',
+			        ISBLANK('Sales Report'[ZD:Stock Availability Date]) ||
+			        'Sales Report'[Working Days Diff Ana new] > 0
+			    )
+			)
+			
+			```
+		lineageTag: bacdac5b-bae4-4bb3-b137-c16812e1fe79
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Qty' = ```
+			SUM('Sales Report'[Del Confirm Quantity])
+			
+			```
+		lineageTag: f9ff84d6-2a26-4baf-afbc-5f5e6074dbe6
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% On Time' = ```
+			DIVIDE([Qty On Time], [Total Qty])
+			
+			```
+		lineageTag: 54c939eb-f2e6-4b71-b000-39f97f14716d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Delayed' = DIVIDE([Qty Delayed], [Total Qty])
+		lineageTag: 91b947f9-c91c-45c4-96b8-d0c6ff3466da
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'DSO Manquantes' = ```
+			
+			VAR DSO_Presentes = VALUES('Sales Report'[Sales Organization])
+			VAR DSO_Attendues = VALUES(DSO_Attendues[DSO])
+			VAR DSO_Manquantes = EXCEPT(DSO_Attendues, DSO_Presentes)
+			VAR DSO_Manquantes_Nommees = SELECTCOLUMNS(DSO_Manquantes, "DSO", [DSO])
+			VAR Nb_Manquantes = COUNTROWS(DSO_Manquantes_Nommees)
+			VAR Liste_Manquantes = CONCATENATEX(DSO_Manquantes_Nommees, [DSO], ", ")
+			
+			RETURN
+			    IF(
+			        Nb_Manquantes = 0,
+			        ".",
+			        "⚠️ " & Liste_Manquantes
+			    )
+			
+			
+			
+			```
+		lineageTag: 15271b73-6e72-445f-b175-c7b7eb8465c8
+
+	measure '% ZA Présente' = ```
+			
+			DIVIDE(
+			    COUNTROWS(
+			        FILTER('Sales Report', NOT ISBLANK('Sales Report'[ZA:Factory Confirmed date]))
+			    ),
+			    COUNTROWS('Sales Report'),
+			    0
+			) * 100
+			
+			
+			```
+		lineageTag: 10fecfd4-62f2-4c51-a448-90acf87fe4af
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Billing EUR not filter' =
+			
+			SUM('Sales Report No filter'[Net value Euros])
+		lineageTag: 785c2586-8d2e-44ee-93f9-307f8d68b886
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Billing EUR Before Today' =
+			
+			CALCULATE(
+			    [Billing EUR not filter],
+			    KEEPFILTERS('Date'[Date] <= TODAY())
+			)
+		lineageTag: bf636b10-ff29-497c-b4b5-c32b12b63f2f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Billing EUR Total' =
+			
+			CALCULATE([Billing EUR Before Today], REMOVEFILTERS('Sales Report'[Sales Organization]))
+		lineageTag: c3d6a78e-0967-4c1f-84e5-8c50537e22a9
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Backlog Billing EUR' =
+			
+			CALCULATE(
+			    SUM('Sales Report'[Net value Euros]),
+			    ISBLANK('Sales Report'[Actual Good Issue Date])
+			)
+		lineageTag: 9eec2574-cbd9-4253-89ce-13f43a249f27
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'In Horizon' =
+			
+			VAR MonthStartToday = DATE(YEAR(TODAY()), MONTH(TODAY()), 1)
+			VAR AxisMonthStart  = DATE(YEAR(MAX('Date'[Date])), MONTH(MAX('Date'[Date])), 1)
+			VAR N = 6   -- <-- mets ton N ici (ou via un paramètre)
+			RETURN
+			IF(
+			    AxisMonthStart >= MonthStartToday &&
+			    AxisMonthStart < EDATE(MonthStartToday, N),
+			    1,
+			    0
+			)
+		formatString: 0
+		lineageTag: 89ae2bb5-0fca-4f87-9bdb-4214f0e19e6e
+
+	measure 'Backlog Billing EUR (Bucketed)' =
+			
+			VAR AxisMonthStart =
+			    DATE(YEAR(MAX('Date'[Date])), MONTH(MAX('Date'[Date])), 1)
+			RETURN
+			CALCULATE(
+			    [Backlog Billing EUR],
+			    KEEPFILTERS('Sales Report'[BucketMonth] = AxisMonthStart)
+			)
+		lineageTag: a693740f-0ff4-4f70-ad21-59d21151c0b4
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Backlog Billing EUR (Cumul Bucketed)' =
+			
+			VAR AxisMonthStart =
+			    DATE(YEAR(MAX('Date'[Date])), MONTH(MAX('Date'[Date])), 1)
+			RETURN
+			CALCULATE(
+			    [Backlog Billing EUR],
+			    FILTER(
+			        ALL('Date'[Date]),
+			        'Date'[Date] <= EOMONTH(AxisMonthStart, 0)
+			    ),
+			    FILTER(
+			        ALL('Sales Report'[BucketMonth]),
+			        'Sales Report'[BucketMonth] <= AxisMonthStart
+			    )
+			)
+		lineageTag: 6c374d94-9f1e-4a5e-a048-172a483dbfda
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Column
+		formatString: 0
+		lineageTag: b04b26f2-8406-45e1-a054-75e153d190b8
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Mesure = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = e91cd54aa5364b9b95f217b6d195c7be
+

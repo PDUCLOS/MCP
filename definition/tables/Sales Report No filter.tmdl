@@ -1,0 +1,1453 @@
+table 'Sales Report No filter'
+	lineageTag: aa767905-901b-46ba-9d48-55daa1e24e38
+
+	column 'Source.Name'
+		dataType: string
+		lineageTag: c7fd5170-801f-47f5-9664-a6438aea80df
+		summarizeBy: none
+		sourceColumn: Source.Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'DSO Sales Order'
+		dataType: int64
+		formatString: 0
+		lineageTag: 938b6037-9363-459b-87aa-d920ec6e9f07
+		summarizeBy: sum
+		sourceColumn: DSO Sales Order
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'SO Item'
+		dataType: int64
+		formatString: 0
+		lineageTag: e5d0c6b0-c0df-4b0f-b18d-6a8ab6801a9d
+		summarizeBy: sum
+		sourceColumn: SO Item
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Item Description'
+		dataType: string
+		lineageTag: d0ef9536-19b1-422f-b176-e4c7f1f138bb
+		summarizeBy: none
+		sourceColumn: Item Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Company Code'
+		dataType: string
+		lineageTag: dff48b56-d4f5-4cf1-b72c-3d15835ce6dd
+		summarizeBy: none
+		sourceColumn: Company Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Organization'
+		dataType: string
+		lineageTag: f9b46c4b-b2ef-49c6-bd44-6d3c20abd048
+		summarizeBy: none
+		sourceColumn: Sales Organization
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Distribution Channel'
+		dataType: string
+		lineageTag: 56b435d7-e346-4593-94b6-45cd3796da4c
+		summarizeBy: none
+		sourceColumn: Distribution Channel
+
+		annotation SummarizationSetBy = Automatic
+
+	column Division
+		dataType: string
+		lineageTag: f19e2a2b-bf6e-4975-8408-1d15b22d9ffc
+		summarizeBy: none
+		sourceColumn: Division
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Office'
+		dataType: string
+		lineageTag: 521cccf1-403a-4ce9-8f46-26a958c37ef0
+		summarizeBy: none
+		sourceColumn: Sales Office
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Group'
+		dataType: string
+		lineageTag: 69df2a03-9321-4598-9be0-f872f9b52f5f
+		summarizeBy: none
+		sourceColumn: Sales Group
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales District'
+		dataType: string
+		lineageTag: 74a406cb-ff03-491d-ad54-76e656170278
+		summarizeBy: none
+		sourceColumn: Sales District
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'SO Creation Date'
+		dataType: string
+		lineageTag: 65da7599-db4a-428b-8ce1-3b1c318ff42f
+		summarizeBy: none
+		sourceColumn: SO Creation Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Entry time'
+		dataType: string
+		lineageTag: 0e20224f-f7b4-46f8-9a82-74697b12fbbc
+		summarizeBy: none
+		sourceColumn: Entry time
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Created by'
+		dataType: string
+		lineageTag: 0baa8727-7a18-4a3c-bee2-57c6c024ee29
+		summarizeBy: none
+		sourceColumn: Created by
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Document Type'
+		dataType: string
+		lineageTag: 4924ed61-1447-4e8a-b06f-d449f1d4f351
+		summarizeBy: none
+		sourceColumn: Sales Document Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Collective Number (SD)'
+		dataType: string
+		lineageTag: b7585b6d-ee44-488f-9712-7b773718eed1
+		summarizeBy: none
+		sourceColumn: Collective Number (SD)
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		lineageTag: 7660a6af-49a4-4042-86ea-35981d379a47
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Plant
+		dataType: string
+		lineageTag: 052db76a-860f-4530-b162-a52a35dbf8f9
+		summarizeBy: none
+		sourceColumn: Plant
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Storage loc. SO'
+		dataType: string
+		lineageTag: b2c1620e-717b-4f8e-be73-9e060b984059
+		summarizeBy: none
+		sourceColumn: Storage loc. SO
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Billing Block'
+		dataType: string
+		lineageTag: 36f6f146-1495-4272-9d8f-836bb47aea96
+		summarizeBy: none
+		sourceColumn: Billing Block
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Destination Country'
+		dataType: string
+		lineageTag: f05198a2-c8a1-4856-b748-7f2f53ee1a7e
+		summarizeBy: none
+		sourceColumn: Destination Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Shipped From'
+		dataType: string
+		lineageTag: 6a2033e7-9c69-4bb0-bc8f-4d73ea4d54dd
+		summarizeBy: none
+		sourceColumn: Shipped From
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Shipping Type'
+		dataType: string
+		lineageTag: 62fa9399-8307-4ffc-a781-5703ef16edfe
+		summarizeBy: none
+		sourceColumn: Shipping Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Shipping type descr.'
+		dataType: string
+		lineageTag: df4c6009-7b90-4b70-baf2-62555789e099
+		summarizeBy: none
+		sourceColumn: Shipping type descr.
+
+		annotation SummarizationSetBy = Automatic
+
+	column Incoterms
+		dataType: string
+		lineageTag: e4160269-ba48-4265-974a-603c9209eef2
+		summarizeBy: none
+		sourceColumn: Incoterms
+
+		annotation SummarizationSetBy = Automatic
+
+	column Material
+		dataType: string
+		lineageTag: 46e6402a-1293-472e-97bc-9e976e46e973
+		summarizeBy: none
+		sourceColumn: Material
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Material Description'
+		dataType: string
+		lineageTag: 59d8cd5e-304b-4c44-85d6-846abe09ac28
+		summarizeBy: none
+		sourceColumn: Material Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Item Billing Block'
+		dataType: string
+		lineageTag: ce0b832f-6857-4fcb-90b4-6aceec97b9fd
+		summarizeBy: none
+		sourceColumn: Item Billing Block
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Material Brand'
+		dataType: string
+		lineageTag: 8d8515c1-9c02-4ca5-aa21-d6c9c560795e
+		summarizeBy: none
+		sourceColumn: Material Brand
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Material Group'
+		dataType: string
+		lineageTag: 83d09b47-00df-4ed8-86a4-bc9a10a68fba
+		summarizeBy: none
+		sourceColumn: Material Group
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Quote Reference Number'
+		dataType: string
+		lineageTag: 29248254-1733-4303-9106-f0c6232e68da
+		summarizeBy: none
+		sourceColumn: Quote Reference Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'VAO No'
+		dataType: string
+		lineageTag: 12f33eb6-6a9a-4bc7-a122-de18dc1afd90
+		summarizeBy: none
+		sourceColumn: VAO No
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Order Quantity'
+		dataType: double
+		lineageTag: 1409cd65-9a9d-4149-9c86-1a37c78044af
+		summarizeBy: sum
+		sourceColumn: Order Quantity
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Item category'
+		dataType: string
+		lineageTag: fefa4195-c4bf-4246-be30-35d837909f8b
+		summarizeBy: none
+		sourceColumn: Item category
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Value (Unit price)'
+		dataType: double
+		lineageTag: c8e59f32-3e47-48fc-a27c-a0dd7a3ed76d
+		summarizeBy: sum
+		sourceColumn: Sales Value (Unit price)
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Net Value'
+		dataType: double
+		lineageTag: 08c1039a-c144-4ff1-a80f-96cf19046597
+		summarizeBy: sum
+		sourceColumn: Net Value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Document Currency'
+		dataType: string
+		lineageTag: 1956026e-90fb-4642-a36f-69a051ab7c36
+		summarizeBy: none
+		sourceColumn: Document Currency
+
+		annotation SummarizationSetBy = Automatic
+
+	column Volume
+		dataType: string
+		lineageTag: e46238d2-23c0-4691-85de-fa339e84988f
+		summarizeBy: none
+		sourceColumn: Volume
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Volume unit'
+		dataType: string
+		lineageTag: 0417c69e-f102-4171-919e-130f32e7ca4d
+		summarizeBy: none
+		sourceColumn: Volume unit
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Profit Center'
+		dataType: string
+		lineageTag: a1bc8e4c-d6cf-4b57-9d86-fc0c9c050418
+		summarizeBy: none
+		sourceColumn: Profit Center
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cust req. Date'
+		dataType: dateTime
+		formatString: dd/mm/yy
+		lineageTag: 3f3b358d-782d-4ca8-9ef7-2b548eb89a94
+		summarizeBy: none
+		sourceColumn: Cust req. Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'Del Confirm Date 1'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 445a77ca-9ccd-426f-afce-0e9294c661cb
+		summarizeBy: none
+		sourceColumn: Del Confirm Date 1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Del Confirm Quantity'
+		dataType: double
+		lineageTag: 894a24f6-db4e-4cec-9133-ac0eefb2be74
+		summarizeBy: sum
+		sourceColumn: Del Confirm Quantity
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Risk Class'
+		dataType: string
+		lineageTag: d9af49a0-d18b-4784-a079-99ae5a38a860
+		summarizeBy: none
+		sourceColumn: Risk Class
+
+		annotation SummarizationSetBy = Automatic
+
+	column Customer
+		dataType: string
+		lineageTag: cdc846f7-fa1b-43c2-8e5d-23e64612395e
+		summarizeBy: none
+		sourceColumn: Customer
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sold to name1'
+		dataType: string
+		lineageTag: c44ac2ed-710a-4be1-9fe1-2bfd7e161f16
+		summarizeBy: none
+		sourceColumn: Sold to name1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sold to name2'
+		dataType: string
+		lineageTag: 8b3db412-af1a-41fb-a925-4cbca15c224d
+		summarizeBy: none
+		sourceColumn: Sold to name2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Customer Reference'
+		dataType: string
+		lineageTag: ae231406-1618-4f19-ab60-bfccf20862b0
+		summarizeBy: none
+		sourceColumn: Customer Reference
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Vertical Market'
+		dataType: string
+		lineageTag: 0b985b63-7bea-4410-adff-827d4e3b8eea
+		summarizeBy: none
+		sourceColumn: Vertical Market
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Rep 1'
+		dataType: string
+		lineageTag: 43673f72-3f87-47c1-8c47-8bd8eaa80fad
+		summarizeBy: none
+		sourceColumn: Sales Rep 1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Rep 1 name 1'
+		dataType: string
+		lineageTag: 4614deed-97d0-412a-953b-7a15421f5990
+		summarizeBy: none
+		sourceColumn: Sales Rep 1 name 1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Reason for rejection'
+		dataType: string
+		lineageTag: 803cb5fe-993b-4d5d-8bf5-9142f8f34955
+		summarizeBy: none
+		sourceColumn: Reason for rejection
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Purchasing Document'
+		dataType: string
+		lineageTag: e3f7000a-2ebd-450f-930d-b466ca18811c
+		summarizeBy: none
+		sourceColumn: Purchasing Document
+
+		annotation SummarizationSetBy = Automatic
+
+	column Item
+		dataType: string
+		lineageTag: c3ba166c-ea74-453e-bebc-58eb08795688
+		summarizeBy: none
+		sourceColumn: Item
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Storage loc. PO'
+		dataType: string
+		lineageTag: 8cf721a0-1218-4120-94b2-9bb7e86aae74
+		summarizeBy: none
+		sourceColumn: Storage loc. PO
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PO Req Delievry date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 86a73c15-6c65-4458-9cd4-74efcbe169d9
+		summarizeBy: none
+		sourceColumn: PO Req Delievry date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Supplier
+		dataType: string
+		lineageTag: 503818e5-279b-45d4-80da-158185fd1094
+		summarizeBy: none
+		sourceColumn: Supplier
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Supplier name'
+		dataType: string
+		lineageTag: 1e09a458-6467-4f7c-9026-a899f2d6f195
+		summarizeBy: none
+		sourceColumn: Supplier name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'DSO PO price'
+		dataType: double
+		lineageTag: c501580f-c270-40c6-aa52-99e2bf33ca8d
+		summarizeBy: sum
+		sourceColumn: DSO PO price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'ZA:Factory Confirmed date'
+		dataType: dateTime
+		formatString: dd/mm/yy
+		lineageTag: a6d7d138-0d71-4307-b763-70cc0fd940e9
+		summarizeBy: none
+		sourceColumn: ZA:Factory Confirmed date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'Confirmed Quantity'
+		dataType: double
+		lineageTag: 5b7ecbd0-eff5-48a8-ac41-166a5dc23d61
+		summarizeBy: sum
+		sourceColumn: Confirmed Quantity
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'ZB:Last Availability Date Confirmed'
+		dataType: dateTime
+		formatString: dd/mm/yy
+		lineageTag: 346931f3-3293-4e9a-9e90-022a1a314c63
+		summarizeBy: none
+		sourceColumn: ZB:Last Availability Date Confirmed
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'ZC:Previous availability date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: b2c8dd02-af0e-4ba5-b5af-d6de5c630671
+		summarizeBy: none
+		sourceColumn: ZC:Previous availability date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'ZD:Stock Availability Date'
+		dataType: dateTime
+		formatString: dd/mm/yy
+		lineageTag: 47677018-89e5-4915-840a-c0b49d17c1c2
+		summarizeBy: none
+		sourceColumn: ZD:Stock Availability Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'LA Reference'
+		dataType: string
+		lineageTag: 0d72a2ed-43ee-4382-bd57-71cf301384d5
+		summarizeBy: none
+		sourceColumn: LA Reference
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cust.GRP5 Description'
+		dataType: string
+		lineageTag: 3f78da67-88ad-41b3-8dda-a0e867f063fc
+		summarizeBy: none
+		sourceColumn: Cust.GRP5 Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Factory SO'
+		dataType: string
+		lineageTag: 0b56f37a-bd36-4c95-a35c-878205d0b97d
+		summarizeBy: none
+		sourceColumn: Factory SO
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Factory SO Item No'
+		dataType: string
+		lineageTag: 036c78db-f40a-4e93-b0a3-c1f03ed2da5f
+		summarizeBy: none
+		sourceColumn: Factory SO Item No
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Outbound delivery'
+		dataType: string
+		lineageTag: 335064ae-50ea-4a21-b1a2-bdb2cb96d860
+		summarizeBy: none
+		sourceColumn: Outbound delivery
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Out. Del Item'
+		dataType: string
+		lineageTag: 4a0b79fa-4051-44dd-b475-d3ca48f51b3d
+		summarizeBy: none
+		sourceColumn: Out. Del Item
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Delivery Quantity'
+		dataType: string
+		lineageTag: bc85101a-24db-4a9a-b0dc-2f647e6446e4
+		summarizeBy: none
+		sourceColumn: Delivery Quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'OBD Document Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 74c96f9a-084a-4fc4-945a-2a3d5f050645
+		summarizeBy: none
+		sourceColumn: OBD Document Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Planned Goods Issue Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 20e04996-da7c-4e68-be16-a4830de48752
+		summarizeBy: none
+		sourceColumn: Planned Goods Issue Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Required DSO / JV Date on site'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: fbf863f3-b1a4-4da3-9d00-fe1295a0712a
+		summarizeBy: none
+		sourceColumn: Required DSO / JV Date on site
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Confirmed Date from HVAC'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: dea70ddd-52d8-45b5-9e3c-b3c13ae1d042
+		summarizeBy: none
+		sourceColumn: Confirmed Date from HVAC
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Pick up date Planned'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 881b80cf-c3c4-4d87-9c8a-88339cb247f8
+		summarizeBy: none
+		sourceColumn: Pick up date Planned
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Actual Good Issue Date'
+		dataType: dateTime
+		formatString: dd/mm/yy
+		lineageTag: 0e3021df-ab66-478a-a66b-12aa6014dcb9
+		summarizeBy: none
+		sourceColumn: Actual Good Issue Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'Factory OBD'
+		dataType: string
+		lineageTag: 200d19af-b8fe-4b6e-a6b0-eef02e4abe26
+		summarizeBy: none
+		sourceColumn: Factory OBD
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Transporter Name'
+		dataType: string
+		lineageTag: b359e0f8-2247-4be3-b89c-9bbd1800eb54
+		summarizeBy: none
+		sourceColumn: Transporter Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Truck Company'
+		dataType: string
+		lineageTag: f9c1c7de-8c00-4efb-a606-454acd490bfb
+		summarizeBy: none
+		sourceColumn: Truck Company
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Driver Name'
+		dataType: string
+		lineageTag: 802ec337-9eed-4db9-9aa0-7ca4b77d8db1
+		summarizeBy: none
+		sourceColumn: Driver Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Truck Plate no'
+		dataType: string
+		lineageTag: 8ec24080-4465-492e-a746-8302ff979e96
+		summarizeBy: none
+		sourceColumn: Truck Plate no
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Pick/Pack Instruction'
+		dataType: string
+		lineageTag: 3489fd32-89ae-4298-a7ad-22aa57a6d810
+		summarizeBy: none
+		sourceColumn: Pick/Pack Instruction
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Real Delivery date'
+		dataType: string
+		lineageTag: 57938395-16fd-477b-9621-050ffee65033
+		summarizeBy: none
+		sourceColumn: Real Delivery date
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'IC Invoice'
+		dataType: string
+		lineageTag: bb6e1ed6-c9e2-48df-9a2d-3bc784e32cff
+		summarizeBy: none
+		sourceColumn: IC Invoice
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'IC Invoice Item'
+		dataType: string
+		lineageTag: a475b38d-caf1-4b53-b337-62528a264a93
+		summarizeBy: none
+		sourceColumn: IC Invoice Item
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'IC Invoice Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 71debfde-223a-44bb-a226-97f3b2fa2a80
+		summarizeBy: none
+		sourceColumn: IC Invoice Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'IC Invoice Net Value'
+		dataType: double
+		lineageTag: 2e5449d3-969c-4997-930d-d21bb9a5eed3
+		summarizeBy: sum
+		sourceColumn: IC Invoice Net Value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Currency
+		dataType: string
+		lineageTag: e33531f0-c9e8-41f1-b2ba-49bde20e2dd3
+		summarizeBy: none
+		sourceColumn: Currency
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'IC Taxes'
+		dataType: string
+		lineageTag: 8ff09b53-5ab1-4704-9195-344328b07aa8
+		summarizeBy: none
+		sourceColumn: IC Taxes
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Billing Type'
+		dataType: string
+		lineageTag: b79d0365-0dc6-4e3c-a27b-ae72a447e8b2
+		summarizeBy: none
+		sourceColumn: Billing Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Customer Invoice'
+		dataType: string
+		lineageTag: 9954ddac-1757-4361-b841-5c7e0744f303
+		summarizeBy: none
+		sourceColumn: Customer Invoice
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Inv. Item'
+		dataType: string
+		lineageTag: 721ae08d-9968-4aa4-be86-50bf53f71d09
+		summarizeBy: none
+		sourceColumn: Inv. Item
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Billed Quantity'
+		dataType: string
+		lineageTag: 0b3feefb-4b91-471d-8217-a300776284cc
+		summarizeBy: none
+		sourceColumn: Billed Quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Invoice date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 7be2d81d-4370-4a0a-9613-dbcfe38d10e9
+		summarizeBy: none
+		sourceColumn: Invoice date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Invoice net Value'
+		dataType: double
+		lineageTag: 305d91d1-25ce-4e76-81eb-4e18fa379ac7
+		summarizeBy: sum
+		sourceColumn: Invoice net Value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Currency_1
+		dataType: string
+		lineageTag: 6fc95d75-a1c8-44a7-bbf3-e40a8fafa6e9
+		summarizeBy: none
+		sourceColumn: Currency_1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Taxes
+		dataType: double
+		lineageTag: 177d3f18-81fa-4d38-b9e1-901c0df578ef
+		summarizeBy: sum
+		sourceColumn: Taxes
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Accounting Document'
+		dataType: string
+		lineageTag: 9c65ad43-a6fe-4613-a50c-52f5d4d558d1
+		summarizeBy: none
+		sourceColumn: Accounting Document
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fluid Type'
+		dataType: string
+		lineageTag: be61ac35-c960-4d83-8e3b-2869787515aa
+		summarizeBy: none
+		sourceColumn: Fluid Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Quantity of Liquid (Per Unit)'
+		dataType: string
+		lineageTag: a1339358-1413-4b70-87b9-9589d18eb95d
+		summarizeBy: none
+		sourceColumn: Quantity of Liquid (Per Unit)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Unit of Quantity Liquid'
+		dataType: string
+		lineageTag: 39fa1152-bdd4-40a2-92c7-18ab2aee5b9e
+		summarizeBy: none
+		sourceColumn: Unit of Quantity Liquid
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Material Price Grp'
+		dataType: string
+		lineageTag: 80001edb-caf5-4093-a41d-7274969e4117
+		summarizeBy: none
+		sourceColumn: Material Price Grp
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mat.Price Group Desc.'
+		dataType: string
+		lineageTag: 2481500d-0864-421d-86da-5f39fec8a168
+		summarizeBy: none
+		sourceColumn: Mat.Price Group Desc.
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cust. Care Status'
+		dataType: string
+		lineageTag: 75acc2cd-3c75-4d6c-8b65-a7f5d7e36265
+		summarizeBy: none
+		sourceColumn: Cust. Care Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cust. Care Status description'
+		dataType: string
+		lineageTag: 3aae5566-e21c-4157-8270-47f5bb98f172
+		summarizeBy: none
+		sourceColumn: Cust. Care Status description
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Internal Note'
+		dataType: string
+		lineageTag: 56a3cd47-33d5-4d8a-8874-df7ac29d4f7f
+		summarizeBy: none
+		sourceColumn: Internal Note
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Requirements type'
+		dataType: string
+		lineageTag: c6acac11-d5fc-4326-a213-3651a02590cc
+		summarizeBy: none
+		sourceColumn: Requirements type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Delivery Route'
+		dataType: string
+		lineageTag: ffa1471f-9ba1-4b53-8542-6ab75c7b07f7
+		summarizeBy: none
+		sourceColumn: Delivery Route
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Delivery Type'
+		dataType: string
+		lineageTag: 6124599e-399b-4887-808a-d463a996dd87
+		summarizeBy: none
+		sourceColumn: Delivery Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Description of delivery priority'
+		dataType: string
+		lineageTag: 43f1b968-632b-41f3-9001-62a74b91c25a
+		summarizeBy: none
+		sourceColumn: Description of delivery priority
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Delivery Postal code'
+		dataType: string
+		lineageTag: 355fb3af-1591-4e3c-aa28-360e958f2f25
+		summarizeBy: none
+		sourceColumn: Delivery Postal code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Delivery Telephone number'
+		dataType: string
+		lineageTag: 92a8c37f-d4c9-4628-addb-0ac11b87def8
+		summarizeBy: none
+		sourceColumn: Delivery Telephone number
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Delivery Route description'
+		dataType: string
+		lineageTag: df204b93-8a57-4cce-9ae1-2c8a91ddd705
+		summarizeBy: none
+		sourceColumn: Delivery Route description
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Delivery Storage location'
+		dataType: string
+		lineageTag: c164a1c5-dd48-48c5-a588-45c56d671ef2
+		summarizeBy: none
+		sourceColumn: Delivery Storage location
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales unit of delivered item'
+		dataType: string
+		lineageTag: eaf35e87-276c-4000-8c02-d72d43262a17
+		summarizeBy: none
+		sourceColumn: Sales unit of delivered item
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Net weight of delivered item'
+		dataType: string
+		lineageTag: fbf12f66-8c02-4310-b88e-675973feb88b
+		summarizeBy: none
+		sourceColumn: Net weight of delivered item
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Gross weight of delivered item'
+		dataType: string
+		lineageTag: 1a26b647-c25a-4ecd-abb0-a740a4159e7c
+		summarizeBy: none
+		sourceColumn: Gross weight of delivered item
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Weight Unit of delivered item'
+		dataType: string
+		lineageTag: 4ff2ec93-030d-4def-b927-a212f474b699
+		summarizeBy: none
+		sourceColumn: Weight Unit of delivered item
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Volume of delivered item'
+		dataType: string
+		lineageTag: 74b958b1-3a83-45a1-be2e-802715d612ca
+		summarizeBy: none
+		sourceColumn: Volume of delivered item
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Volume unit of delivered item'
+		dataType: string
+		lineageTag: d471a101-92c4-426b-8902-4320a4a8ec76
+		summarizeBy: none
+		sourceColumn: Volume unit of delivered item
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Net value Euros' = ```
+			
+			VAR Devise = 'Sales Report No filter'[Document Currency]
+			VAR Taux = 
+			    CALCULATE(
+			        FIRSTNONBLANK('Taux'[TAUX DE CONVERSION EUROS], 1),
+			        FILTER(
+			            ALL('Taux'),
+			            'Taux'[MONNAIE] = Devise
+			        )
+			    )
+			RETURN 
+			    DIVIDE('Sales Report No filter'[Net Value], Taux)
+			```
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 8954a360-ef13-48e0-b925-4cb6cd72786d
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Invoiced Euros' = ```
+			
+			VAR Devise = 'Sales Report No filter'[Currency_1]
+			VAR Taux = 
+			    CALCULATE(
+			        FIRSTNONBLANK('Taux'[TAUX DE CONVERSION EUROS], 1),
+			        FILTER(
+			            ALL('Taux'),
+			            'Taux'[MONNAIE] = Devise
+			        )
+			    )
+			RETURN 
+			    DIVIDE('Sales Report No filter'[Invoice net Value], Taux)
+			```
+		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
+		lineageTag: 9da6824d-5587-4b5f-9f66-1b391e819a95
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column SOITEM = 'Sales Report No filter'[DSO Sales Order] & 'Sales Report No filter'[SO item]
+		dataType: int64
+		formatString: 0
+		lineageTag: d953fb21-3c92-4597-a414-0b9f380e3b06
+		summarizeBy: sum
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Date de Référence YYYY - MM' = ```
+			
+			VAR DateSelectionnee = 
+			    COALESCE(
+			            'Sales Report No Filter'[ZD:Stock Availability Date],
+			            'Sales Report No Filter'[External Vendor GR Date],
+			            'Sales Report No Filter'[ZB:Last Availability Date Confirmed],
+			            'Sales Report No Filter'[ZA:Factory Confirmed date],
+			            'Sales Report No Filter'[Cust req. Date]
+			    )
+			RETURN
+			    IF(
+			        ISBLANK(DateSelectionnee),
+			        "Pas de date",
+			        FORMAT(DateSelectionnee, "YYYY-MM")
+			    )
+			```
+		dataType: string
+		lineageTag: d4eee216-3f1c-45d4-b8f1-fa5d47fac430
+		summarizeBy: none
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column Doublon_SOITEM =
+			
+			VAR ValeurCourante = 'Sales Report No filter'[SOITEM]
+			VAR Occurrences =
+			    CALCULATE(
+			        COUNTROWS('Sales Report No filter'),
+			        FILTER(
+			            'Sales Report No filter',
+			            'Sales Report No filter'[SOITEM] = ValeurCourante
+			        )
+			    )
+			RETURN
+			    IF(Occurrences > 1, "Doublon", "Unique")
+		lineageTag: a0511964-335f-462f-80c6-fdd6bb534b1c
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Statut_SOITEM =
+			
+			VAR ValeurCourante = 'Sales Report No filter'[SOITEM]
+			VAR DateCourante = 'Sales Report No filter'[Outbound Delivery]
+			
+			VAR MinDateSOITEM =
+			    CALCULATE(
+			        MIN('Sales Report No filter'[Outbound Delivery]),
+			        FILTER(
+			            ALL('Sales Report No filter'),
+			            'Sales Report No filter'[SOITEM] = ValeurCourante
+			                && NOT(ISBLANK('Sales Report No filter'[Outbound Delivery]))
+			        )
+			    )
+			
+			VAR NbLignesSOITEM =
+			    CALCULATE(
+			        COUNTROWS('Sales Report No filter'),
+			        FILTER(
+			            ALL('Sales Report No filter'),
+			            'Sales Report No filter'[SOITEM] = ValeurCourante
+			        )
+			    )
+			
+			RETURN
+			    IF(
+			        ISBLANK(ValeurCourante),
+			        BLANK(),
+			        IF(
+			            NbLignesSOITEM = 1,
+			            "Unique",
+			            IF(
+			                NOT(ISBLANK(DateCourante)) && DateCourante = MinDateSOITEM,
+			                "Doublon inclus",
+			                "Doublon exclu"
+			            )
+			        )
+			    )
+		lineageTag: cedd7459-724c-4334-94d6-601e2f9c069f
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'External Vendor GR Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 05cabd52-a1a0-4444-9676-5ce7c9f0f49b
+		summarizeBy: none
+		sourceColumn: External Vendor GR Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Source Date de Référence YYYY-MM' =
+			
+			VAR ZD = 'Sales Report No Filter'[ZD:Stock Availability Date]
+			VAR GR = 'Sales Report No Filter'[External Vendor GR Date]
+			VAR ZB = 'Sales Report No Filter'[ZB:Last Availability Date Confirmed]
+			VAR ZA = 'Sales Report No Filter'[ZA:Factory Confirmed date]
+			VAR CR = 'Sales Report No Filter'[Cust req. Date]
+			
+			VAR DateChoisie =
+			    COALESCE(ZD, GR, ZB, ZA, CR)
+			
+			VAR SourceChoisie =
+			    SWITCH(
+			        TRUE(),
+			        NOT(ISBLANK(ZD)), "ZD",
+			        NOT(ISBLANK(GR)), "GR",
+			        NOT(ISBLANK(ZB)), "ZB",
+			        NOT(ISBLANK(ZA)), "ZA",
+			        NOT(ISBLANK(CR)), "Cust req",
+			        BLANK()
+			    )
+			RETURN
+			    IF(
+			        ISBLANK(DateChoisie),
+			        "No Date",
+			        SourceChoisie & " " & FORMAT(DateChoisie, "YYYY-MM")
+			    )
+		lineageTag: f4613a80-0772-40cc-98d4-9cc6bd11730c
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Categorie_Material =
+			
+			VAR Mat =
+			    UPPER( COALESCE('Sales Report No Filter'[Material], "") )
+			VAR SoldTo =
+			    UPPER( COALESCE('Sales Report No Filter'[Sold to name1], "") )
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			
+			        -- Material
+			        LEFT(Mat, 7) = "STARTUP", "STARTUP",
+			        LEFT(Mat, 3) = "GTB", "GTB",
+			        CONTAINSSTRING(Mat, "CHARGES"), "CHARGES",
+			        CONTAINSSTRING(Mat, "EXTENDED") || CONTAINSSTRING(Mat, "EXTSERV"), "EXTWAR/SERV",
+			        CONTAINSSTRING(Mat, "FRAIS")
+			            || CONTAINSSTRING(Mat, "INSP")
+			            || CONTAINSSTRING(Mat, "SUP")
+			            || CONTAINSSTRING(Mat, "SUB-C")
+			            || CONTAINSSTRING(Mat, "OPTION")
+			            || CONTAINSSTRING(Mat, "STORAGE"), "FRAIS",
+			
+			        -- Sold-to
+			        CONTAINSSTRING(SoldTo, "VIESSMANN"), "Product/Viessmann",
+			
+			        "Product"
+			    )
+		lineageTag: f2c42dde-c843-4afe-aba9-f48617a2cb71
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Flag_500k_et_SO_1M =
+			
+			VAR _so = 'Sales Report No filter'[DSO Sales Order]
+			VAR _montantLigne = 'Sales Report No filter'[Net value Euros]
+			VAR _totalSO =
+			    CALCULATE(
+			        SUM ( 'Sales Report No filter'[Net value Euros] ),
+			        FILTER(
+			            ALLEXCEPT(
+			                'Sales Report No filter',
+			                'Sales Report No filter'[DSO Sales Order]
+			            ),
+			            'Sales Report No filter'[DSO Sales Order] = _so
+			        )
+			    )
+			RETURN
+			IF( _montantLigne > 500000 && _totalSO > 1000000, TRUE(), FALSE() )
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 2c8b0831-480e-4956-9638-d86551ba328e
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total commande' =
+			
+			CALCULATE(
+			    SUM ( 'Sales Report No filter'[Net value Euros] ),
+			    ALLEXCEPT(
+			        'Sales Report No filter',
+			        'Sales Report No filter'[DSO Sales Order]
+			    )
+			)
+		lineageTag: bb9d4c50-d56c-4751-a564-7ff170913516
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ActualGoodIssue_YYYY_MM =
+			
+			VAR d = 'Sales Report No filter'[Actual Good Issue Date]
+			VAR dd =
+			    IF(
+			        ISBLANK(d),
+			        BLANK(),
+			        // Si c'est déjà un type Date, DATEVALUE renverra la même chose (ok)
+			        DATEVALUE(d)
+			    )
+			RETURN
+			IF(
+			    ISBLANK(dd),
+			    BLANK(),
+			    FORMAT(dd, "YYYY-MM")
+			)
+		lineageTag: e08dcdb2-08fc-4446-ba53-7f34326d6cf2
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActualGoodIssue_YYYY_MM_CurrentMonthOnly =
+			
+			VAR dd = DATEVALUE('Sales Report No filter'[Actual Good Issue Date])
+			VAR StartMonth = DATE(YEAR(TODAY()), MONTH(TODAY()), 1)
+			VAR StartNextMonth = EDATE(StartMonth, 1)
+			RETURN
+			IF(
+			    ISBLANK(dd),
+			    BLANK(),
+			    IF(
+			        dd >= StartMonth && dd < StartNextMonth,
+			        FORMAT(dd, "YYYY-MM"),
+			        BLANK()
+			    )
+			)
+		lineageTag: 076f3d7d-a940-4f3f-ba4a-ad60675263cf
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Date Référence Source' =
+			
+			VAR DateSelectionnee =
+			    COALESCE(
+			        'Sales Report No Filter'[ZD:Stock Availability Date],
+			        'Sales Report No Filter'[External Vendor GR Date],
+			        'Sales Report No Filter'[ZB:Last Availability Date Confirmed],
+			        'Sales Report No Filter'[ZA:Factory Confirmed date],
+			        'Sales Report No Filter'[Cust req. Date]
+			    )
+			VAR SourceDate =
+			    SWITCH(
+			        TRUE(),
+			        NOT ISBLANK('Sales Report No Filter'[ZD:Stock Availability Date]), "ZD",
+			        NOT ISBLANK('Sales Report No Filter'[External Vendor GR Date]), "Ext",
+			        NOT ISBLANK('Sales Report No Filter'[ZB:Last Availability Date Confirmed]), "ZB",
+			        NOT ISBLANK('Sales Report No Filter'[ZA:Factory Confirmed date]), "ZA",
+			        NOT ISBLANK('Sales Report No Filter'[Cust req. Date]), "Cust Req",
+			        BLANK()
+			    )
+			RETURN
+			    IF(
+			        ISBLANK(DateSelectionnee),
+			        "Pas de date",
+			        SourceDate
+			    )
+		lineageTag: 6f8719d6-df78-4b9a-90f7-210dc9369b5d
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Sales Report No filter' = m
+		mode: import
+		source = ```
+				let
+				    Source = SharePoint.Files("https://carcgl.sharepoint.com/sites/MD_Power_BI", [ApiVersion = 15]),
+				    #"Lignes filtrées" = Table.SelectRows(Source, each ([Folder Path] = "https://carcgl.sharepoint.com/sites/MD_Power_BI/Shared Documents/chantier/20_ Customer Care/01_MAIN_Table/20_Avail_Sales_Report_All_Suppliers/")),
+				    #"Lignes filtrées1" = Table.SelectRows(#"Lignes filtrées", each ([Folder Path] = "https://carcgl.sharepoint.com/sites/MD_Power_BI/Shared Documents/chantier/20_ Customer Care/01_MAIN_Table/20_Avail_Sales_Report_All_Suppliers/")),
+				    #"Fichiers masqués filtrés1" = Table.SelectRows(#"Lignes filtrées1", each [Attributes]?[Hidden]? <> true),
+				    #"Appeler une fonction personnalisée1" = Table.AddColumn(#"Fichiers masqués filtrés1", "Transformer le fichier", each #"Transformer le fichier"([Content])),
+				    #"Colonnes renommées1" = Table.RenameColumns(#"Appeler une fonction personnalisée1", {"Name", "Source.Name"}),
+				    #"Autres colonnes supprimées1" = Table.SelectColumns(#"Colonnes renommées1", {"Source.Name", "Transformer le fichier"}),
+				    #"Colonne de tables développée1" = Table.ExpandTableColumn(#"Autres colonnes supprimées1", "Transformer le fichier", Table.ColumnNames(#"Transformer le fichier"(#"Exemple de fichier"))),
+				    #"remplacer 00.00.0000 date" = Table.ReplaceValue(#"Colonne de tables développée1","00.00.0000","",Replacer.ReplaceText,{"ZA:Factory Confirmed date", "ZA:Creation Date", "ZB:Last Availability Date Confirmed", "ZB:Creation Date", "ZC:Previous availability date", "ZC:Creation Date", "ZD:Stock Availability Date", "ZD:Creation Date", "External Vendor Conf. Date", "External Vendor GR Date", "OBD Document Date", "Planned Goods Issue Date", "Required DSO / JV Date on site", "Confirmed Date from HVAC", "Pick up date Planned", "Actual Good Issue Date", "Real Delivery date", "IC Invoice Date", "Invoice date", "Del Confirm Date 1", "PO Req Delievry date","Cust req. Date"}),
+				    #"rempalcer Volume" = Table.ReplaceValue(#"remplacer 00.00.0000 date",".","",Replacer.ReplaceText,{"Volume"}),
+				    #"Valeur remplacée1" = Table.ReplaceValue(#"rempalcer Volume",".","",Replacer.ReplaceText,{"Net weight of delivered item", "Gross weight of delivered item", "Volume of delivered item", "Volume unit of delivered item"}),
+				    #"Valeur remplacée" = Table.ReplaceValue(#"Valeur remplacée1",".","",Replacer.ReplaceText,{"Sales Value (Unit price)", "Net Value", "DSO PO price", "IC Invoice Net Value", "Invoice net Value", "Taxes"}),
+				    #"Valeur remplacée2" = Table.ReplaceValue(#"Valeur remplacée",".","",Replacer.ReplaceText,{"Order Quantity", "Sales Value (Unit price)", "Net Value", "Del Confirm Quantity", "IC Invoice Net Value", "Invoice net Value", "Taxes"}),
+				    
+				    // Conversion avec gestion d'erreurs pour les nombres
+				    #"Type modifié2" = Table.TransformColumns(#"Valeur remplacée2", {
+				        {"IC Invoice Net Value", each try Number.From(_) otherwise null, type number},
+				        {"Taxes", each try Number.From(_) otherwise null, type number},
+				        {"Invoice net Value", each try Number.From(_) otherwise null, type number},
+				        {"Sales Value (Unit price)", each try Number.From(_) otherwise null, type number},
+				        {"Net Value", each try Number.From(_) otherwise null, type number},
+				        {"Order Quantity", each try Number.From(_) otherwise null, type number},
+				        {"Del Confirm Quantity", each try Number.From(_) otherwise null, type number}
+				    }),
+				    
+				    // Conversion avec gestion d'erreurs pour les dates
+				    #"Type modifié dates1" = Table.TransformColumns(#"Type modifié2", {
+				        {"Cust req. Date", each try Date.From(_) otherwise null, type date},
+				        {"Del Confirm Date 1", each try Date.From(_) otherwise null, type date}
+				    }),
+				    
+				    #"Type modifié3" = Table.TransformColumns(#"Type modifié dates1", {
+				        {"DSO PO price", each try Number.From(_) otherwise null, type number},
+				        {"Confirmed Quantity", each try Number.From(_) otherwise null, type number}
+				    }),
+				    
+				    #"Type modifié" = Table.TransformColumns(#"Type modifié3", {
+				        {"Sales Value (Unit price)", each try Number.From(_) otherwise null, type number},
+				        {"Net Value", each try Number.From(_) otherwise null, type number},
+				        {"DSO PO price", each try Number.From(_) otherwise null, type number},
+				        {"IC Invoice Net Value", each try Number.From(_) otherwise null, type number},
+				        {"Invoice net Value", each try Number.From(_) otherwise null, type number},
+				        {"Taxes", each try Number.From(_) otherwise null, type number},
+				        {"PO Req Delievry date", each try Date.From(_) otherwise null, type date},
+				        {"ZA:Factory Confirmed date", each try Date.From(_) otherwise null, type date},
+				        {"ZA:Creation Date", each try Date.From(_) otherwise null, type date},
+				        {"ZB:Last Availability Date Confirmed", each try Date.From(_) otherwise null, type date},
+				        {"ZB:Creation Date", each try Date.From(_) otherwise null, type date},
+				        {"ZC:Previous availability date", each try Date.From(_) otherwise null, type date},
+				        {"ZC:Creation Date", each try Date.From(_) otherwise null, type date},
+				        {"ZD:Stock Availability Date", each try Date.From(_) otherwise null, type date},
+				        {"ZD:Creation Date", each try Date.From(_) otherwise null, type date},
+				        {"External Vendor Conf. Date", each try Date.From(_) otherwise null, type date},
+				        {"External Vendor GR Date", each try Date.From(_) otherwise null, type date},
+				        {"OBD Document Date", each try Date.From(_) otherwise null, type date},
+				        {"Planned Goods Issue Date", each try Date.From(_) otherwise null, type date},
+				        {"Required DSO / JV Date on site", each try Date.From(_) otherwise null, type date},
+				        {"Confirmed Date from HVAC", each try Date.From(_) otherwise null, type date},
+				        {"Pick up date Planned", each try Date.From(_) otherwise null, type date},
+				        {"Actual Good Issue Date", each try Date.From(_) otherwise null, type date},
+				        {"IC Invoice Date", each try Date.From(_) otherwise null, type date},
+				        {"Invoice date", each try Date.From(_) otherwise null, type date}
+				    }),
+				    
+				    #"Erreurs remplacées1" = Table.ReplaceErrorValues(#"Type modifié", {{"Source.Name", ""}}),
+				    #"Colonnes supprimées" = Table.RemoveColumns(#"Erreurs remplacées1",{"Sales Rep 1 Commission  %", "Sales Rep 2", "Sales Rep 2 name 1", "Sales Rep 2 Commission  %", "Sales Rep 3", "Sales Rep 3 name1", "Sales Rep 3 Commission %", "Sales Rep 4", "Sales Rep 4 name1", "Sales Rep 4 Commission %", "Sales Rep 5", "Sales Rep 5 name1", "Sales Rep 5 Commission %", "STO Number", "STO Item", "Storage loc. STO", "STO Supplier", "Supplier name STO", "STO Pur. Price per unit", "ZA:Creation Date", "ZB:Creation Date", "ZC:Creation Date", "ZD:Creation Date", "External Vendor Conf. Date", "AB Reference", "Customer Group 5", "Ship-to party", "Ship-to name1", "Ship-to name2", "Street", "City", "Postal Code", "Ship-To Comment", "End user", "End-user name1", "End-user name2", "End-user City", "End-user Postal Code", "End-user Street", "End user Country", "Engineering code", "Engineering Code name 1", "Internal Prescriber", "Internal Prescriber name 1", "Employee Resp.", "Employee Resp. name1", "Tax Code", "Tax code desc", "Ext. Sales agent 1", "Ext. Sales agent 1 name 1", "Ext. Sales agent 1 Commission  %", "Ext. Sales agent 2", "Ext. Sales agent 2 name1", "Ext. Sales agent 2 Commission  %", "Credit Status", "Credit Status D.", "Blocked for MRP", "User Status"}),
+				    #"Valeur remplacée3" = Table.ReplaceValue(#"Colonnes supprimées","0000","",Replacer.ReplaceText,{"DSO Sales Order", "SO Item"}),
+				    #"Type modifié4" = Table.TransformColumns(#"Valeur remplacée3", {
+				        {"DSO Sales Order", each try Int64.From(_) otherwise null, Int64.Type},
+				        {"SO Item", each try Int64.From(_) otherwise null, Int64.Type}
+				    }),
+				    #"Valeur remplacée4" = Table.ReplaceValue(#"Type modifié4","00000","",Replacer.ReplaceText,{"Factory SO Item No"}),
+				    #"Valeur remplacée5" = Table.ReplaceValue(#"Valeur remplacée4","00000","",Replacer.ReplaceText,{"Supplier"})
+				in
+				    #"Valeur remplacée5"
+				```
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

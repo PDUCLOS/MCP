@@ -1,0 +1,2811 @@
+table 'Sales Report'
+	lineageTag: 37f2214f-6f05-436b-9c8d-06d16bb459e6
+
+	column 'Source.Name'
+		dataType: string
+		lineageTag: 52171c8d-d159-4831-b8f0-109f6f742991
+		summarizeBy: none
+		sourceColumn: Source.Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'DSO Sales Order'
+		dataType: int64
+		formatString: 0
+		lineageTag: fc36392c-95fd-4b82-b1ed-e02f5e149a78
+		summarizeBy: sum
+		sourceColumn: DSO Sales Order
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'SO Item'
+		dataType: int64
+		formatString: 0
+		lineageTag: 08e532e6-dbe7-42ea-b7e8-3a162bb9aa3e
+		summarizeBy: sum
+		sourceColumn: SO Item
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Item Description'
+		dataType: string
+		lineageTag: ea53c8a5-0276-42ea-ad55-27693e7a5a33
+		summarizeBy: none
+		sourceColumn: Item Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Company Code'
+		dataType: string
+		lineageTag: 6d363ed8-aa54-48d4-9a06-ef3c647a9a7e
+		summarizeBy: none
+		sourceColumn: Company Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Organization'
+		dataType: string
+		lineageTag: 5c65307e-0ba9-4fb0-a60b-b55a0b426244
+		summarizeBy: none
+		sourceColumn: Sales Organization
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Distribution Channel'
+		dataType: string
+		lineageTag: 4404329c-4322-4386-935e-3ce07b1465f0
+		summarizeBy: none
+		sourceColumn: Distribution Channel
+
+		annotation SummarizationSetBy = Automatic
+
+	column Division
+		dataType: string
+		lineageTag: 98a67168-0b62-41ac-98e7-5dd90b3769e5
+		summarizeBy: none
+		sourceColumn: Division
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Office'
+		dataType: string
+		lineageTag: e86645ff-584f-40bf-86a3-87e1c6a0c8c3
+		summarizeBy: none
+		sourceColumn: Sales Office
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Group'
+		dataType: string
+		lineageTag: 8ec34233-d6c8-491e-94a6-2a48d7da7287
+		summarizeBy: none
+		sourceColumn: Sales Group
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'SO Creation Date'
+		dataType: dateTime
+		formatString: dd/mm/yy
+		lineageTag: 71786e89-b3c7-4997-93bb-07606d4b79e4
+		summarizeBy: none
+		sourceColumn: SO Creation Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'Entry time'
+		dataType: string
+		lineageTag: d7979a8a-572c-4ce9-8a96-4cd17a5e80ce
+		summarizeBy: none
+		sourceColumn: Entry time
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Created by'
+		dataType: string
+		lineageTag: df9dedbb-9a02-4b3a-bc40-916fd66266a2
+		summarizeBy: none
+		sourceColumn: Created by
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Document Type'
+		dataType: string
+		lineageTag: 516468f4-6537-4474-808c-dd6243e5ab36
+		summarizeBy: none
+		sourceColumn: Sales Document Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Collective Number (SD)'
+		dataType: string
+		lineageTag: 5cbcc137-787a-4af7-ada9-62cfe31ebd10
+		summarizeBy: none
+		sourceColumn: Collective Number (SD)
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		lineageTag: 41b6b119-d7b7-4adf-be20-a362f8b04741
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Plant
+		dataType: string
+		lineageTag: 446cb82f-3b09-4ae4-90b4-391d354dbd7e
+		summarizeBy: none
+		sourceColumn: Plant
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Storage loc. SO'
+		dataType: string
+		lineageTag: d89b7b56-6dbe-4214-a924-8cce6d081038
+		summarizeBy: none
+		sourceColumn: Storage loc. SO
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Billing Block'
+		dataType: string
+		lineageTag: d98cf58b-94ba-46de-800f-f51871943a0d
+		summarizeBy: none
+		sourceColumn: Billing Block
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Destination Country'
+		dataType: string
+		lineageTag: 0aee5aec-0981-48c0-b38e-ebe5fe7b6734
+		summarizeBy: none
+		sourceColumn: Destination Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Shipped From'
+		dataType: string
+		lineageTag: ab958d47-0f9a-4efd-bcde-935dd11cee8b
+		summarizeBy: none
+		sourceColumn: Shipped From
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Shipping Type'
+		dataType: string
+		lineageTag: ff5e56e1-e546-4d20-9846-4aae6bcb062d
+		summarizeBy: none
+		sourceColumn: Shipping Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Shipping type descr.'
+		dataType: string
+		lineageTag: ce85ad51-0758-419e-bc31-b318333e57de
+		summarizeBy: none
+		sourceColumn: Shipping type descr.
+
+		annotation SummarizationSetBy = Automatic
+
+	column Incoterms
+		dataType: string
+		lineageTag: e145a00d-1422-426d-8f0a-8b97b1c9071d
+		summarizeBy: none
+		sourceColumn: Incoterms
+
+		annotation SummarizationSetBy = Automatic
+
+	column Material
+		dataType: string
+		lineageTag: 8101af6a-6753-49d5-ab72-48aaa11a9317
+		summarizeBy: none
+		sourceColumn: Material
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Material Description'
+		dataType: string
+		lineageTag: 2f8deb7e-ed16-494e-8b4c-878b7098f17c
+		summarizeBy: none
+		sourceColumn: Material Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Item Billing Block'
+		dataType: string
+		lineageTag: d4886d76-1b08-422c-97ff-0a49626964b2
+		summarizeBy: none
+		sourceColumn: Item Billing Block
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Material Brand'
+		dataType: string
+		lineageTag: cf24e6ea-69da-4c32-bf43-c494e7bb4f55
+		summarizeBy: none
+		sourceColumn: Material Brand
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Material Group'
+		dataType: string
+		lineageTag: e36dda22-e13e-402b-965f-43dcaf66050f
+		summarizeBy: none
+		sourceColumn: Material Group
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Quote Reference Number'
+		dataType: string
+		lineageTag: 5821b3aa-d7e0-44d1-89c9-cd9e8d4f8890
+		summarizeBy: none
+		sourceColumn: Quote Reference Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'VAO No'
+		dataType: string
+		lineageTag: 3cb6f2a0-734f-4fdf-af1b-b36c9c7168d6
+		summarizeBy: none
+		sourceColumn: VAO No
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Order Quantity'
+		dataType: double
+		formatString: 0
+		lineageTag: 70f31338-8cb9-4142-b112-6dad9bd1aa3c
+		summarizeBy: sum
+		sourceColumn: Order Quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Item category'
+		dataType: string
+		lineageTag: 3d7d1551-7de0-4e91-ad6d-8b85f63f5be3
+		summarizeBy: none
+		sourceColumn: Item category
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Value (Unit price)'
+		dataType: double
+		lineageTag: 9b25a99d-f0b7-4a47-8b64-c7924db9fcaa
+		summarizeBy: sum
+		sourceColumn: Sales Value (Unit price)
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Net Value'
+		dataType: double
+		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
+		lineageTag: 95dfa98d-c189-49b4-be5b-dc87ec2e949b
+		summarizeBy: sum
+		sourceColumn: Net Value
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Document Currency'
+		dataType: string
+		lineageTag: e0ba49c1-d89f-4fcc-90e1-d1dc0ae1e37b
+		summarizeBy: none
+		sourceColumn: Document Currency
+
+		annotation SummarizationSetBy = Automatic
+
+	column Volume
+		dataType: string
+		lineageTag: b376bb5e-05e6-41b5-9102-dab6d271d04d
+		summarizeBy: none
+		sourceColumn: Volume
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Volume unit'
+		dataType: string
+		lineageTag: 588fc073-c61d-4c63-88bc-ad66dbb8c7a2
+		summarizeBy: none
+		sourceColumn: Volume unit
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Profit Center'
+		dataType: string
+		lineageTag: f80524f7-bead-4e93-a5fc-6273354fabdf
+		summarizeBy: none
+		sourceColumn: Profit Center
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cust req. Date'
+		dataType: dateTime
+		formatString: dd/mm/yy
+		lineageTag: 35a33547-40ad-4258-ad8b-ee273e750abe
+		summarizeBy: none
+		sourceColumn: Cust req. Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'Del Confirm Date 1'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: ea643c3d-9116-4ec8-9d4b-e0755f5e8fc2
+		summarizeBy: none
+		sourceColumn: Del Confirm Date 1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Del Confirm Quantity'
+		dataType: double
+		formatString: 0
+		lineageTag: 318768a7-7f01-4d52-baec-2cc97bd646a0
+		summarizeBy: sum
+		sourceColumn: Del Confirm Quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Risk Class'
+		dataType: string
+		lineageTag: 2ccde3c7-0f64-444a-b3d8-f2ca6788cfac
+		summarizeBy: none
+		sourceColumn: Risk Class
+
+		annotation SummarizationSetBy = Automatic
+
+	column Customer
+		dataType: string
+		lineageTag: e288f882-fc0b-4860-bd5b-d0da615f4dec
+		summarizeBy: none
+		sourceColumn: Customer
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sold to name1'
+		dataType: string
+		lineageTag: 39108138-d9ea-4203-90c3-c09d12e2c6c8
+		summarizeBy: none
+		sourceColumn: Sold to name1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sold to name2'
+		dataType: string
+		lineageTag: e65dffbc-9c88-44b1-9d86-3486f44499f3
+		summarizeBy: none
+		sourceColumn: Sold to name2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Customer Reference'
+		dataType: string
+		lineageTag: 91edc1b9-6075-471e-8e0c-32a4ef4606a7
+		summarizeBy: none
+		sourceColumn: Customer Reference
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Vertical Market'
+		dataType: string
+		lineageTag: 2f2131d8-7911-47bc-8826-f9316c03acc0
+		summarizeBy: none
+		sourceColumn: Vertical Market
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Rep 1'
+		dataType: string
+		lineageTag: b1a8b80f-25f2-4f4c-8688-ebd9032ac2b2
+		summarizeBy: none
+		sourceColumn: Sales Rep 1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Rep 1 name 1'
+		dataType: string
+		lineageTag: fffcc463-4692-4479-b4aa-b4312becd029
+		summarizeBy: none
+		sourceColumn: Sales Rep 1 name 1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Reason for rejection'
+		dataType: string
+		lineageTag: 01f68b11-1e51-452b-ae2d-81256af3dee7
+		summarizeBy: none
+		sourceColumn: Reason for rejection
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Purchasing Document'
+		dataType: string
+		lineageTag: 610bfd4f-6501-42ff-9106-5874df841999
+		summarizeBy: none
+		sourceColumn: Purchasing Document
+
+		annotation SummarizationSetBy = Automatic
+
+	column Item
+		dataType: string
+		lineageTag: 4ae177d1-4ea3-4ed1-89a8-40e5eb2ae915
+		summarizeBy: none
+		sourceColumn: Item
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Storage loc. PO'
+		dataType: string
+		lineageTag: 34577893-27af-4b53-8392-cd05cfde657a
+		summarizeBy: none
+		sourceColumn: Storage loc. PO
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PO Req Delievry date'
+		dataType: dateTime
+		formatString: dd/mm/yy
+		lineageTag: c49bf06b-760e-4eb3-aae8-47474667da6e
+		summarizeBy: none
+		sourceColumn: PO Req Delievry date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column Supplier
+		dataType: string
+		lineageTag: ed03a741-ee38-45c7-9292-c4a4e720fcd5
+		summarizeBy: none
+		sourceColumn: Supplier
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Supplier name'
+		dataType: string
+		lineageTag: 64ff4e3b-e1e0-4879-a8a2-003393c226ee
+		summarizeBy: none
+		sourceColumn: Supplier name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'DSO PO price'
+		dataType: double
+		lineageTag: ed26ccb4-58b9-4a85-98e4-f838023e2846
+		summarizeBy: sum
+		sourceColumn: DSO PO price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'ZA:Factory Confirmed date'
+		dataType: dateTime
+		formatString: dd/mm/yy
+		lineageTag: e1b76e24-6c71-4304-9f0e-0a4591a1efa2
+		summarizeBy: none
+		sourceColumn: ZA:Factory Confirmed date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'Confirmed Quantity'
+		dataType: double
+		formatString: 0
+		lineageTag: 28a7573f-3179-4cf6-bc5c-185968df240a
+		summarizeBy: sum
+		sourceColumn: Confirmed Quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ZB:Last Availability Date Confirmed'
+		dataType: dateTime
+		formatString: dd/mm/yy
+		lineageTag: 450b7bff-36f2-4b53-bf44-02518aa40b63
+		summarizeBy: none
+		sourceColumn: ZB:Last Availability Date Confirmed
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'ZC:Previous availability date'
+		dataType: dateTime
+		formatString: dd/mm/yy
+		lineageTag: b9fa8f3e-8e05-4e73-9011-e7edb4d0ac40
+		summarizeBy: none
+		sourceColumn: ZC:Previous availability date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'ZD:Stock Availability Date'
+		dataType: dateTime
+		formatString: dd/mm/yy
+		lineageTag: 1c373b7f-e473-4154-9a7c-ce6467943849
+		summarizeBy: none
+		sourceColumn: ZD:Stock Availability Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'LA Reference'
+		dataType: string
+		lineageTag: 018b6286-6c4c-497e-9516-ba095e11b142
+		summarizeBy: none
+		sourceColumn: LA Reference
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Factory SO'
+		dataType: string
+		lineageTag: fbfe1ea5-2f41-4942-8f61-9afe0ce9df38
+		summarizeBy: none
+		sourceColumn: Factory SO
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Factory SO Item No'
+		dataType: string
+		lineageTag: 29fb22ad-a98b-4d96-a08b-579dc4aead63
+		summarizeBy: none
+		sourceColumn: Factory SO Item No
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Outbound delivery'
+		dataType: string
+		lineageTag: ddae4d79-545e-42fa-a8ca-ef07932b3a04
+		summarizeBy: none
+		sourceColumn: Outbound delivery
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Out. Del Item'
+		dataType: string
+		lineageTag: 8f839b13-3636-4ba9-a6b6-55368bac0a9e
+		summarizeBy: none
+		sourceColumn: Out. Del Item
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Delivery Quantity'
+		dataType: string
+		lineageTag: a258aeb9-5100-4c28-aa09-1ef0ed4bff47
+		summarizeBy: none
+		sourceColumn: Delivery Quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'OBD Document Date'
+		dataType: dateTime
+		formatString: dd/mm/yy
+		lineageTag: cb6f2eab-54eb-4eea-a348-568307275bcb
+		summarizeBy: none
+		sourceColumn: OBD Document Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'Planned Goods Issue Date'
+		dataType: dateTime
+		formatString: dd/mm/yy
+		lineageTag: 5564f176-e990-4c64-b8b3-c818111159d0
+		summarizeBy: none
+		sourceColumn: Planned Goods Issue Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'Required DSO / JV Date on site'
+		dataType: dateTime
+		formatString: dd/mm/yy
+		lineageTag: 1cea6fde-0483-4ca1-88fe-a7a873c733f3
+		summarizeBy: none
+		sourceColumn: Required DSO / JV Date on site
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'Confirmed Date from HVAC'
+		dataType: dateTime
+		formatString: dd/mm/yy
+		lineageTag: d2402540-98b7-4abf-b676-ddce5fe32b04
+		summarizeBy: none
+		sourceColumn: Confirmed Date from HVAC
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'Pick up date Planned'
+		dataType: dateTime
+		formatString: dd/mm/yy
+		lineageTag: 922a30d3-20a5-40d7-b745-7cda7398cfa2
+		summarizeBy: none
+		sourceColumn: Pick up date Planned
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'Actual Good Issue Date'
+		dataType: dateTime
+		formatString: dd/mm/yy
+		lineageTag: 3bb6bd46-3aab-44c7-8453-1fcf173ae1b1
+		summarizeBy: none
+		sourceColumn: Actual Good Issue Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'Factory OBD'
+		dataType: string
+		lineageTag: c22e3440-1483-42db-a865-23363c6c7285
+		summarizeBy: none
+		sourceColumn: Factory OBD
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Transporter Name'
+		dataType: string
+		lineageTag: 16289246-a51a-4279-b0cd-93113f86907c
+		summarizeBy: none
+		sourceColumn: Transporter Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Truck Company'
+		dataType: string
+		lineageTag: b36d8268-4e8a-4eb8-a86f-9bfe08972476
+		summarizeBy: none
+		sourceColumn: Truck Company
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Driver Name'
+		dataType: string
+		lineageTag: c79fb02b-9696-43e8-ad5d-2d66445ea717
+		summarizeBy: none
+		sourceColumn: Driver Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Truck Plate no'
+		dataType: string
+		lineageTag: 716cf8d3-deea-453f-af0d-c231532a8337
+		summarizeBy: none
+		sourceColumn: Truck Plate no
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Pick/Pack Instruction'
+		dataType: string
+		lineageTag: ab272689-81a7-482d-97a2-d2e5f64da046
+		summarizeBy: none
+		sourceColumn: Pick/Pack Instruction
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Real Delivery date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: c179b472-531f-4f64-9291-9a21c0c8f7bb
+		summarizeBy: none
+		sourceColumn: Real Delivery date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'IC Invoice'
+		dataType: string
+		lineageTag: 652f3544-ace8-4866-9524-040d4e40b937
+		summarizeBy: none
+		sourceColumn: IC Invoice
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'IC Invoice Item'
+		dataType: string
+		lineageTag: 76ec82c1-3d2c-41dd-be82-2abc88a7af1b
+		summarizeBy: none
+		sourceColumn: IC Invoice Item
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'IC Invoice Date'
+		dataType: dateTime
+		formatString: dd/mm/yy
+		lineageTag: 241b0a9e-694b-4e36-a195-131aa3a92627
+		summarizeBy: none
+		sourceColumn: IC Invoice Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'IC Invoice Net Value'
+		dataType: double
+		lineageTag: 1e3e07a9-5da5-417f-bcae-234409598087
+		summarizeBy: sum
+		sourceColumn: IC Invoice Net Value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Currency
+		dataType: string
+		lineageTag: 8e52a9de-1016-4fea-b529-86a2b66cd51a
+		summarizeBy: none
+		sourceColumn: Currency
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'IC Taxes'
+		dataType: string
+		lineageTag: 93161b70-6bde-4363-bd35-eb6a7146e44c
+		summarizeBy: none
+		sourceColumn: IC Taxes
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Billing Type'
+		dataType: string
+		lineageTag: c2c5e648-b15b-464c-8d69-7ffee1b566c8
+		summarizeBy: none
+		sourceColumn: Billing Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Customer Invoice'
+		dataType: string
+		lineageTag: 24e38eef-e68c-4df4-abc4-304aed3975c2
+		summarizeBy: none
+		sourceColumn: Customer Invoice
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Inv. Item'
+		dataType: string
+		lineageTag: e6c3ac79-27c8-4023-9ad9-59b53ca74f8d
+		summarizeBy: none
+		sourceColumn: Inv. Item
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Billed Quantity'
+		dataType: string
+		lineageTag: d57b0703-c690-4913-8c84-1e314cca667b
+		summarizeBy: none
+		sourceColumn: Billed Quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Invoice date'
+		dataType: dateTime
+		formatString: dd/mm/yy
+		lineageTag: b6ceab8a-d752-4581-a5c7-d59f46ea56f9
+		summarizeBy: none
+		sourceColumn: Invoice date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'Invoice net Value'
+		dataType: double
+		lineageTag: 071dcf7c-a396-4ad4-b134-e5644a86efa0
+		summarizeBy: sum
+		sourceColumn: Invoice net Value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Money
+		dataType: string
+		lineageTag: a014c0be-f417-4905-9382-b9d9fc96e101
+		summarizeBy: none
+		sourceColumn: Money
+
+		annotation SummarizationSetBy = Automatic
+
+	column Taxes
+		dataType: double
+		lineageTag: 0d0ee011-b2e2-4398-9ba8-abd6e6af256e
+		summarizeBy: sum
+		sourceColumn: Taxes
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Accounting Document'
+		dataType: string
+		lineageTag: 6eb038f4-67a9-4967-beec-5b389b0cb308
+		summarizeBy: none
+		sourceColumn: Accounting Document
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fluid Type'
+		dataType: string
+		lineageTag: 04959841-f970-4287-adb9-e3b57b355b8c
+		summarizeBy: none
+		sourceColumn: Fluid Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Quantity of Liquid (Per Unit)'
+		dataType: string
+		lineageTag: bcd92121-b260-4a4d-a531-abc90be5f165
+		summarizeBy: none
+		sourceColumn: Quantity of Liquid (Per Unit)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Unit of Quantity Liquid'
+		dataType: string
+		lineageTag: e0e28f7e-6f18-4c72-90b6-dde4816b8c51
+		summarizeBy: none
+		sourceColumn: Unit of Quantity Liquid
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Material Price Grp'
+		dataType: string
+		lineageTag: 8f49f660-d9ea-4746-9bc4-6b0604c320aa
+		summarizeBy: none
+		sourceColumn: Material Price Grp
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mat.Price Group Desc.'
+		dataType: string
+		lineageTag: 2b49bda7-01c3-4e83-99c8-c3f705b77167
+		summarizeBy: none
+		sourceColumn: Mat.Price Group Desc.
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cust. Care Status'
+		dataType: string
+		lineageTag: d30cc834-fedd-45ef-af4c-482fd55928bd
+		summarizeBy: none
+		sourceColumn: Cust. Care Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cust. Care Status description'
+		dataType: string
+		lineageTag: aa59ac1c-ba06-49ac-8750-dff7bfa63a2d
+		summarizeBy: none
+		sourceColumn: Cust. Care Status description
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Internal Note'
+		dataType: string
+		lineageTag: 42e7d8f5-cab4-4eef-98d0-2a32b6e41692
+		summarizeBy: none
+		sourceColumn: Internal Note
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Requirements type'
+		dataType: string
+		lineageTag: 639b4183-e5cc-4cc0-bfac-d25b66cd1a2a
+		summarizeBy: none
+		sourceColumn: Requirements type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Delivery Route'
+		dataType: string
+		lineageTag: c9326ba7-7db5-4696-864d-4481c5fc3a8c
+		summarizeBy: none
+		sourceColumn: Delivery Route
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Delivery Type'
+		dataType: string
+		lineageTag: 531c3642-b90c-4fe7-a930-92198b9a044c
+		summarizeBy: none
+		sourceColumn: Delivery Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Description of delivery priority'
+		dataType: string
+		lineageTag: 66562ce4-3446-44b2-b28b-c437ceb59f3f
+		summarizeBy: none
+		sourceColumn: Description of delivery priority
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Delivery Postal code'
+		dataType: string
+		lineageTag: e4c571e1-12b7-4f50-9ce9-7edf0fc3ab68
+		summarizeBy: none
+		sourceColumn: Delivery Postal code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Delivery Telephone number'
+		dataType: string
+		lineageTag: 532fe55e-6f6b-4147-9717-8614dec3c1fe
+		summarizeBy: none
+		sourceColumn: Delivery Telephone number
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Delivery Route description'
+		dataType: string
+		lineageTag: 8966fb6b-1b25-494d-8a2f-a34782db5784
+		summarizeBy: none
+		sourceColumn: Delivery Route description
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Delivery Storage location'
+		dataType: string
+		lineageTag: 0a25a743-975b-41c6-8f7a-2445eb91ce54
+		summarizeBy: none
+		sourceColumn: Delivery Storage location
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales unit of delivered item'
+		dataType: string
+		lineageTag: d8adc04b-b112-48fd-99a4-5e6b16ed33bc
+		summarizeBy: none
+		sourceColumn: Sales unit of delivered item
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Net weight of delivered item'
+		dataType: string
+		lineageTag: ba38ef16-f2ac-40f7-8d95-1fa47d32e15f
+		summarizeBy: none
+		sourceColumn: Net weight of delivered item
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Gross weight of delivered item'
+		dataType: string
+		lineageTag: 18fa3e89-c77d-4473-8b98-7e5f1e0e1ae1
+		summarizeBy: none
+		sourceColumn: Gross weight of delivered item
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Weight Unit of delivered item'
+		dataType: string
+		lineageTag: 4b8e35df-d5da-483a-88a2-75ea35fd63d6
+		summarizeBy: none
+		sourceColumn: Weight Unit of delivered item
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Volume of delivered item'
+		dataType: string
+		lineageTag: 689a66d9-54e3-486f-8265-66ca8e118b91
+		summarizeBy: none
+		sourceColumn: Volume of delivered item
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Volume unit of delivered item'
+		dataType: string
+		lineageTag: 5b6a7729-c5f1-4dab-a5db-71812d4a2cfa
+		summarizeBy: none
+		sourceColumn: Volume unit of delivered item
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'DSO delivery date Required T/F'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 6c6cd79f-f4c5-4ae5-8c97-7ff10f799756
+		summarizeBy: none
+		sourceColumn: DSO delivery date Required T/F
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ZB Current month T/F'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: db683b99-0ea1-4b18-8050-269505fbe6d5
+		summarizeBy: none
+		sourceColumn: ZB Current month T/F
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Planned Goods Issue Current month T/F'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 6e7912bc-0c93-4310-92c5-708c0b2e233b
+		summarizeBy: none
+		sourceColumn: Planned Goods Issue Current month T/F
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Invoiced Date Current month T/F'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: e2665115-0756-48ab-adfc-48391e1d518b
+		summarizeBy: none
+		sourceColumn: Invoiced Date Current month T/F
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Delivery status Controle ZA' = ```
+			
+			SWITCH(
+			    TRUE(),
+			    
+			    // Cas 1 : CARRIER CULOZ SA ou CARRIER MONTILLA, S.A.
+			    'Sales Report'[Supplier name] IN { "CARRIER CULOZ SA", "CARRIER MONTILLA, S.A." },
+			    IF (
+			        'Sales Report'[ZC:Previous availability date] <= 'Sales Report'[ZA:Factory Confirmed date],
+			        IF (
+			            ISBLANK('Sales Report'[ZB:Last Availability Date Confirmed]),
+			            "NO ZB",
+			            IF (
+			                'Sales Report'[ZB:Last Availability Date Confirmed] <= 'Sales Report'[ZA:Factory Confirmed date],
+			                "OK",
+			                "LATE"
+			            )
+			        ),
+			        IF (
+			            'Sales Report'[ZB:Last Availability Date Confirmed] >= 'Sales Report'[ZA:Factory Confirmed date],
+			            "OK",
+			            "2 MODIFICATION"
+			        )
+			    ),
+			
+			    // Cas 2 : CARRIER MONTLUEL SCS
+			    'Sales Report'[Supplier name] = "CARRIER MONTLUEL SCS",
+			    IF (
+			        'Sales Report'[ZC:Previous availability date] <> BLANK(),
+			        "ONE MODIFICATION",
+			        IF (
+			            'Sales Report'[ZB:Last Availability Date Confirmed] > 'Sales Report'[ZA:Factory Confirmed date],
+			            "LATE",
+			            "OK"
+			        )
+			    ),
+			
+			    // Cas par défaut
+			    BLANK()
+			)
+			
+			
+			```
+		lineageTag: fceb48f3-1f28-44ba-9319-11f4e4184d1e
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column ANALYSE = IF('Sales Report'[ZD:Stock Availability Date]<'Sales Report'[ZA:Factory Confirmed date],'Sales Report'[ZD:Stock Availability Date]>='Sales Report'[ZA:Factory Confirmed date])
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 22c930fe-0641-474b-863c-5737febd95a6
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Actuel Good Issue T/F' = IF(ISBLANK('Sales Report'[Actual Good Issue Date]),FALSE,TRUE)
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: f687ddd2-0049-4d83-99ca-2631de617c80
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ZD Current month T/F'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: a4b98add-b2f8-4827-be66-cc71152ff537
+		summarizeBy: none
+		sourceColumn: ZD Current month T/F
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ZA Current Month T/F'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: d3441a4f-66d1-4a2d-b0bd-7be3166be08e
+		summarizeBy: none
+		sourceColumn: ZA Current Month T/F
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Delivery status With ZD' = ```
+			
+			IF (
+			    ISBLANK('Sales Report'[ZD:Stock Availability Date]),
+			    "No ZD",
+			    IF (
+			        'Sales Report'[ZD:Stock Availability Date] <= 'Sales Report'[ZA:Factory Confirmed date],
+			        "OK",
+			        IF (
+			            'Sales Report'[ZD:Stock Availability Date] < 'Sales Report'[ZB:Last Availability Date Confirmed],
+			            "Delay recovery",
+			            IF (
+			                'Sales Report'[ZC:Previous availability date] <= 'Sales Report'[ZA:Factory Confirmed date],
+			                IF (
+			                    ISBLANK('Sales Report'[ZB:Last Availability Date Confirmed]),
+			                    "NO ZB",
+			                    IF (
+			                        'Sales Report'[ZB:Last Availability Date Confirmed] <= 'Sales Report'[ZA:Factory Confirmed date],
+			                        "OK",
+			                        "LATE"
+			                    )
+			                ),
+			                IF (
+			                    'Sales Report'[ZB:Last Availability Date Confirmed] <= 'Sales Report'[ZA:Factory Confirmed date],
+			                    "OK",
+			                    "2 MODIFICATION"
+			                )
+			            )
+			        )
+			    )
+			)
+			
+			
+			```
+		lineageTag: dbe92821-acb1-46a4-a59e-bfbefd524ed3
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Taux Conversion Euros' = ```
+			
+			CALCULATE(
+			    MAX('Taux'[TAUX DE CONVERSION EUROS]),
+			    FILTER('Taux', 'Taux'[MONNAIE] = 'Sales Report'[money])
+			)
+			
+			```
+		lineageTag: 4d9abab3-5c62-4db7-877e-bf6dd91de283
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Invoiced Euros' = ```
+			
+			VAR Devise = 'Sales Report'[Money]
+			VAR Taux = 
+			    CALCULATE(
+			        FIRSTNONBLANK('Taux'[TAUX DE CONVERSION EUROS], 1),
+			        FILTER(
+			            ALL('Taux'),
+			            'Taux'[MONNAIE] = Devise
+			        )
+			    )
+			RETURN 
+			    DIVIDE('Sales Report'[Invoice net Value], Taux)
+			
+			
+			```
+		lineageTag: bea5dd08-2cd6-4a3c-a875-ea47dc9947e4
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Net value Euros' = ```
+			
+			VAR Devise = 'Sales Report'[Document Currency]
+			VAR Taux = 
+			    CALCULATE(
+			        FIRSTNONBLANK('Taux'[TAUX DE CONVERSION EUROS], 1),
+			        FILTER(
+			            ALL('Taux'),
+			            'Taux'[MONNAIE] = Devise
+			        )
+			    )
+			RETURN 
+			    DIVIDE('Sales Report'[Net Value], Taux)
+			```
+		lineageTag: 16a6b1b0-3e53-44da-8336-f8a76ad5e057
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Delivery Status new' = ```
+			
+			VAR ZD = 'Sales Report'[ZD:Stock Availability Date]
+			VAR ZA = 'Sales Report'[ZA:Factory Confirmed date]
+			VAR ZB = 'Sales Report'[ZB:Last Availability Date Confirmed]
+			VAR Vendor = 'Sales Report'[Supplier name]
+			RETURN
+			    IF(
+			        ISBLANK(ZD),
+			        "Not Produced",
+			        IF(
+			            Vendor IN {"CARRIER MONTILLA, S.A.", "CARRIER CULOZ SA"},
+			            IF(
+			                NOT ISBLANK(ZB),
+			                "Modify ZA",
+			                IF(
+			                    ZD > ZA,
+			                    "Late",
+			                    IF(ZD = ZA, "On time", "In advanced")
+			                )
+			            ),
+			            IF(
+			                Vendor = "CARRIER MONTLUEL SCS",
+			                IF(
+			                    ZD > ZA,
+			                    "Late",
+			                    IF(ZD = ZA, "On time", "In advanced")
+			                ),
+			                "Not Produced"
+			            )
+			        )
+			    )
+			
+			```
+		lineageTag: 8306e52a-89a7-45ad-9a22-35484b2a7d6f
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Delivery Timing Status ZD new' = ```
+			
+			VAR Vendor = 'Sales Report'[Supplier name]
+			VAR ZB = 'Sales Report'[ZB:Last Availability Date Confirmed]
+			VAR ZC = 'Sales Report'[ZC:Previous availability date]
+			RETURN
+			    IF(
+			        Vendor IN {"CARRIER MONTILLA, S.A.", "CARRIER CULOZ SA"},
+			        IF(
+			            NOT ISBLANK(ZB),
+			            "DECALAGE",
+			            "ON TIME"
+			        ),
+			        IF(
+			            Vendor = "CARRIER MONTLUEL SCS",
+			            IF(
+			                NOT ISBLANK(ZC),
+			                "DECALAGE",
+			                "ON TIME"
+			            ),
+			            ""
+			        )
+			    )
+			
+			```
+		lineageTag: c07f1216-776e-4534-8d49-0dfc4eec9581
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Working Days Diff Ana' = ```
+			
+			VAR StartDate = 'Sales Report'[ZA:Factory Confirmed date]
+			VAR EndDate = 'Sales Report'[ZD:Stock Availability Date]
+			VAR TotalDays = DATEDIFF(StartDate, EndDate, DAY)
+			VAR NumWeekends = INT(TotalDays / 7) * 2 +
+			    SWITCH(WEEKDAY(StartDate, 2),
+			        6, IF(WEEKDAY(EndDate, 2) >= 7, 2, IF(WEEKDAY(EndDate, 2) >= 6, 1, 0)),
+			        7, IF(WEEKDAY(EndDate, 2) >= 6, 2, IF(WEEKDAY(EndDate, 2) >= 7, 1, 0)),
+			        IF(WEEKDAY(EndDate, 2) >= 7, 1, 0)
+			    )
+			RETURN
+			    IF(
+			        ISBLANK(EndDate),
+			        -3400,
+			        TotalDays - NumWeekends
+			    )
+			
+			```
+		formatString: 0
+		lineageTag: 61550c8d-03ee-47af-96c0-0e11c5d4ad7d
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Delivery Timing Flag' =
+			
+			VAR ZD = 'Sales Report'[ZD:Stock Availability Date]
+			VAR DaysDiff = 'Sales Report'[Working Days Diff Ana]
+			RETURN
+			    IF(
+			        ISBLANK(ZD),
+			        "DELAYED",
+			        IF(DaysDiff <= 1, "ON TIME", "DELAYED")
+			    )
+		lineageTag: f694504b-cf67-4123-aafb-fbcecbc71330
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Delivery Delay Category Ana' = ```
+			
+			VAR DaysDiff = 'Sales Report'[Working Days Diff Ana new]
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        DaysDiff <= -3000, "NO ZD",
+			        DaysDiff <= -40, "40+ days advance",
+			        DaysDiff <= -20, "20-39 days advance",
+			        DaysDiff <= -10, "10-19 days advance",
+			        DaysDiff <= -6, "6-9 days advance",
+			        DaysDiff <= -1, "1-5 days advance",
+			        DaysDiff = 0, "On Time",
+			        DaysDiff <= 5, "1-5 days delay",
+			        DaysDiff <= 9, "6-9 days delay",
+			        DaysDiff <= 19, "10-19 days delay",
+			        DaysDiff <= 39, "20-39 days delay",
+			        DaysDiff >= 40, "40+ days delay",
+			        "KO"
+			    )
+			
+			
+			```
+		lineageTag: ab85d2d5-fa36-4d0b-9942-b0e0d5103b52
+		summarizeBy: none
+		sortByColumn: 'Delivery Delay Category Order'
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ecart_Jours = DATEDIFF('Sales Report'[Planned Goods Issue Date], 'Sales Report'[Actual Good Issue Date], DAY)
+		formatString: 0
+		lineageTag: ee384057-aaf5-4c3c-b95b-fc6a06bceaae
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Decalage_Mois = DATEDIFF('Sales Report'[Planned Goods Issue Date], 'Sales Report'[Actual Good Issue Date], MONTH)
+		formatString: 0
+		lineageTag: 7e7b233b-d7fd-4312-9b47-af4b9772a5e2
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Statut_Livraison = ```
+			
+			SWITCH(
+			    TRUE(),
+			    'Sales Report'[Ecart_Jours] < 0, "In advance",
+			    'Sales Report'[Ecart_Jours] > 0, "Late",
+			    'Sales Report'[Ecart_Jours] = 0, "On Time"
+			)
+			
+			```
+		lineageTag: 77d11971-abad-474f-8012-4cf297473b4d
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Delivery Status Simple Ana' = ```
+			
+			VAR ZD = 'Sales Report'[ZD:Stock Availability Date]
+			VAR DaysDiff = 'Sales Report'[Working Days Diff Ana new]
+			RETURN
+			    IF(
+			        ISBLANK(ZD),
+			        "DELAYED",
+			        IF(DaysDiff <= 0, "ON TIME", "DELAYED")
+			    )
+			
+			```
+		lineageTag: 771dd259-4572-43e6-b83f-0528c5b0438e
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Count = 1
+		formatString: 0
+		lineageTag: 83cdfb9d-f14d-4e29-bde3-84b121233679
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Delivery status Controle ZB' =
+			
+			IF (
+			    NOT ISBLANK('Sales Report'[ZC:Previous availability date]),
+			    ">1 MODIF",
+			    IF (
+			        NOT ISBLANK('Sales Report'[ZB:Last Availability Date Confirmed]),
+			        "1 MODIF",
+			        "No MODIF"
+			    )
+			)
+		lineageTag: a5535b65-f5f1-474e-8a0f-80813ec9e016
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ZD vs ZA Status' = ```
+			
+			IF (
+			    ISBLANK('Sales Report'[ZA:Factory Confirmed date]),
+			    BLANK(),
+			    IF (
+			        ISBLANK('Sales Report'[ZD:Stock Availability Date]),
+			        IF (
+			            'Sales Report'[ZA:Factory Confirmed date] < TODAY(),
+			            "3 DELAYED",
+			            "IN PRODUCTION"
+			        ),
+			        IF (
+			            'Sales Report'[ZD:Stock Availability Date] < 'Sales Report'[ZA:Factory Confirmed date],
+			            "1 ADVANCE",
+			            IF (
+			                'Sales Report'[ZD:Stock Availability Date] > 'Sales Report'[ZA:Factory Confirmed date],
+			                "3 DELAYED",
+			                "2 ON TIME"
+			            )
+			        )
+			    )
+			)
+			
+			
+			
+			
+			
+			```
+		lineageTag: 22b47a87-7434-4e18-97ef-466b79e09b34
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ZB vs ZD status' = ```
+			
+			IF (
+			    ISBLANK('Sales Report'[ZD:Stock Availability Date]) || ISBLANK('Sales Report'[ZB:Last Availability Date Confirmed]),
+			    BLANK(),
+			    IF (
+			        'Sales Report'[ZD:Stock Availability Date] < 'Sales Report'[ZB:Last Availability Date Confirmed],
+			        "1 ADVANCE",
+			        IF (
+			            'Sales Report'[ZD:Stock Availability Date] > 'Sales Report'[ZB:Last Availability Date Confirmed],
+			            "3 DELAYED",
+			            "2 ON TIME"
+			        )
+			    )
+			)
+			
+			```
+		lineageTag: 4442c2a8-62ee-4afd-815c-f153b7ed12c6
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ZA vs ZB status' = ```
+			
+			IF (
+			    ISBLANK('Sales Report'[ZA:Factory Confirmed date]) || ISBLANK('Sales Report'[ZB:Last Availability Date Confirmed]),
+			    BLANK(),
+			    IF (
+			        'Sales Report'[ZA:Factory Confirmed date] > 'Sales Report'[ZB:Last Availability Date Confirmed],
+			        "1 ADVANCE",
+			        IF (
+			            'Sales Report'[ZA:Factory Confirmed date] < 'Sales Report'[ZB:Last Availability Date Confirmed],
+			            "3 DELAYED",
+			            "2 ON TIME"
+			        )
+			    )
+			)
+			
+			
+			```
+		lineageTag: 42b961e8-cd9a-4b38-bf25-42d5e7db7ced
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Ecart_Jours ZD-ZB' = DATEDIFF('Sales Report'[ZD:Stock Availability Date], 'Sales Report'[ZB:Last Availability Date Confirmed], DAY)
+		formatString: 0
+		lineageTag: 6bffdfad-a157-437d-bc3e-23d0055b7899
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Ecart_Jours ZA-ZB' = DATEDIFF('Sales Report'[ZA:Factory Confirmed date], 'Sales Report'[ZB:Last Availability Date Confirmed], DAY)
+		formatString: 0
+		lineageTag: 2d03b2b0-854b-48a7-a9b8-d1560417b275
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Ecart_Jours ZD-ZA' = DATEDIFF('Sales Report'[ZD:Stock Availability Date], 'Sales Report'[ZA:Factory Confirmed date], DAY)
+		formatString: 0
+		lineageTag: 4d1a0666-b478-46a0-ad15-fe8bb9968a12
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ALL STATUT CONDITIONS' = ```
+			
+			SWITCH(
+			    TRUE(),
+			
+			    // Cas 1 : MONTILLA et CULOZ
+			    'Sales Report'[Supplier name] IN { "CARRIER MONTILLA, S.A.", "CARRIER CULOZ SA" },
+			    SWITCH(
+			        TRUE(),
+			        'Sales Report'[ZB:Last Availability Date Confirmed] > 'Sales Report'[ZA:Factory Confirmed date]
+			            && 'Sales Report'[ZD:Stock Availability Date] <= 'Sales Report'[ZA:Factory Confirmed date], "CATCHING UP",
+			        'Sales Report'[ZD:Stock Availability Date]<= 'Sales Report'[ZA:Factory Confirmed date], "ON TIME" ,
+			        'Sales Report'[ZD:Stock Availability Date] > 'Sales Report'[ZA:Factory Confirmed date], "DELAYED",
+			        ""
+			    ),
+			
+			    // Cas 2 : MONTLUEL
+			    'Sales Report'[Supplier name] = "CARRIER MONTLUEL SCS",
+			    SWITCH(
+			        TRUE(),
+			        'Sales Report'[ZB:Last Availability Date Confirmed] < 'Sales Report'[ZA:Factory Confirmed date], "ADVANCE",
+			        'Sales Report'[ZD:Stock Availability Date] = 'Sales Report'[ZA:Factory Confirmed date], "ON TIME",
+			        'Sales Report'[ZD:Stock Availability Date] < 'Sales Report'[ZA:Factory Confirmed date], "ADVANCE",
+			        'Sales Report'[ZD:Stock Availability Date] > 'Sales Report'[ZA:Factory Confirmed date], "DELAYED",
+			        "OK"
+			    )
+			)
+			
+			
+			
+			```
+		lineageTag: 61c3acbe-78b8-44d6-b23b-c01241ca8a68
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Delivery ZB / ZA' = ```
+			
+			SWITCH(
+			    TRUE(),
+			
+			    // Cas 1 : MONTILLA et CULOZ
+			    'Sales Report'[Supplier name] IN { "CARRIER MONTILLA, S.A.", "CARRIER CULOZ SA" },
+			    SWITCH(
+			        TRUE(),
+			        'Sales Report'[ZB:Last Availability Date Confirmed] > 'Sales Report'[ZA:Factory Confirmed date], "DELAYED",
+			        'Sales Report'[ZB:Last Availability Date Confirmed] >= 'Sales Report'[ZA:Factory Confirmed date], "ON TIME",
+			        "OK"
+			    ),
+			
+			    // Cas 2 : MONTLUEL
+			    'Sales Report'[Supplier name] = "CARRIER MONTLUEL SCS",
+			    SWITCH(
+			        TRUE(),
+			        'Sales Report'[ZB:Last Availability Date Confirmed] < 'Sales Report'[ZA:Factory Confirmed date], "ADVANCE",
+			        "ON TIME"
+			    )
+			)
+			
+			```
+		lineageTag: aa842e33-5926-41ea-85b9-ac3b1a5c97a3
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Délai ZD vs AGI' = ```
+			
+			VAR DiffJours = DATEDIFF('Sales Report'[ZD:Stock Availability Date], 'Sales Report'[Actual Good Issue Date], DAY)
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        DiffJours <= 7, "≤ 1 Week",
+			        DiffJours <= 14, "Between 1 et 2 Weeks",
+			        DiffJours > 14, "> 2 Weeks",
+			        BLANK()
+			    )
+			
+			```
+		lineageTag: 447e0b20-39c6-4897-ace7-f3db1106005e
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column SOITEM = ```
+			'Sales Report'[DSO Sales Order] & 'Sales Report'[SO item]
+			
+			```
+		lineageTag: cb26c0c7-f532-4f22-a5ab-d796e1e3dfdc
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Doublon_SOITEM = ```
+			
+			VAR ValeurCourante = 'Sales Report'[SOITEM]
+			VAR Occurrences = 
+			    CALCULATE(
+			        COUNTROWS('Sales Report'),
+			        FILTER('Sales Report', 'Sales Report'[SOITEM] = ValeurCourante)
+			    )
+			RETURN IF(Occurrences > 1, "Doublon", "Unique")
+			```
+		lineageTag: be991486-5416-4572-81a0-f02badbe75eb
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ZA empty' = ```
+			
+			IF (
+			    ISBLANK('Sales Report'[ZA:factory Confirmed Date]) || 
+			    TRIM('Sales Report'[ZA:factory Confirmed Date] & "") = "",
+			    IF (
+			        ISBLANK('Sales Report'[ZD:Stock Availability Date]) &&
+			        ISBLANK('Sales Report'[Actual Good Issue Date]),
+			        1,
+			        BLANK()
+			    ),
+			    BLANK()
+			)
+			
+			
+			
+			```
+		formatString: 0
+		lineageTag: ced780a9-62b2-478b-8d68-5a6dc9f9f4a5
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'SO Factory Empty' = ```
+			IF(
+			    (
+			        ISBLANK('Sales Report'[Factory SO]) ||  
+			        'Sales Report'[Factory SO] = "SO"
+			    ) &&
+			    ISBLANK('Sales Report'[ZD:Stock Availability Date]) &&
+			    ISBLANK('Sales Report'[Actual Good Issue Date]),
+			    1,
+			    0
+			)
+			
+			```
+		formatString: 0
+		lineageTag: f635cabd-9873-4281-80e7-345f83b23b17
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Not invoiced good issue' = ```
+			
+			IF(
+			    NOT ISBLANK('Sales Report'[Actual Good Issue Date]) &&
+			    ISBLANK('Sales Report'[IC Invoice Date]),
+			    'Sales Report'[Net value Euros],
+			    BLANK()
+			)
+			
+			```
+		lineageTag: b5e478d2-0803-4fff-8422-36ba582d5cb6
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Overdue ZA ZB' = ```
+			
+			VAR ZADate = 'Sales Report'[ZA:Factory Confirmed date]
+			VAR ZBDate = 'Sales Report'[ZB:Last Availability Date Confirmed]
+			VAR ZDDate = 'Sales Report'[ZD:Stock Availability Date]
+			VAR ActualGoodIssueDate = 'Sales Report'[Actual Good Issue Date]
+			RETURN
+			IF(
+			    ZADate < TODAY() &&
+			    ISBLANK(ZBDate) &&
+			    ISBLANK(ZDDate) &&
+			    ISBLANK(ActualGoodIssueDate),
+			    1,
+			    BLANK()
+			)
+			
+			
+			
+			
+			```
+		formatString: 0
+		lineageTag: 9a453573-d166-47a5-b33d-e5c6c0a1976f
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ZA Mois Year' = DATE(YEAR('Sales Report'[ZA:Factory Confirmed date]), MONTH('Sales Report'[ZA:Factory Confirmed date]), 1)
+		formatString: yyyy-mm
+		lineageTag: b8f68a7f-08c2-4576-87d9-117c449ee315
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'Total Valid Deliveries' = ```
+			
+			CALCULATE(
+			    COUNTROWS('Sales Report'),
+			    NOT ISBLANK('Sales Report'[ZD:Stock Availability Date])
+			)
+			
+			```
+		formatString: 0
+		lineageTag: fd1a7e32-e1a1-4088-bc03-e77fa66b0754
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'OBD Month Year Date' = DATE(YEAR('Sales Report'[OBD Document Date]), MONTH('Sales Report'[OBD Document Date]), 1)
+		dataType: dateTime
+		formatString: yyyy-mm
+		lineageTag: 6ceaba92-fdf6-4f15-8f29-9a48528faa23
+		summarizeBy: none
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'Delivery Delay Category Order' = ```
+			
+			VAR DaysDiff = 'Sales Report'[Working Days Diff Ana new]
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        DaysDiff <= -3000, 1,  // NO ZD
+			        DaysDiff <= -40, 2,    // 40+ days advance
+			        DaysDiff <= -20, 3,    // 20 to 39 days advance
+			        DaysDiff <= -10, 4,    // 10 to 19 days advance
+			        DaysDiff <= -6, 5,     // 6 to 9 days advance
+			        DaysDiff <= -1, 6,     // 1 to 5 days advance
+			        DaysDiff = 0, 7,       // On Time
+			        DaysDiff <= 5, 8,      // 1 to 5 days delay
+			        DaysDiff <= 9, 9,      // 6 to 9 days delay
+			        DaysDiff <= 19, 10,    // 10 to 19 days delay
+			        DaysDiff <= 39, 11,    // 20 to 39 days delay
+			        DaysDiff >= 40, 12,    // 40+ days delay
+			        13                     // KO
+			    )
+			
+			
+			```
+		formatString: 0
+		lineageTag: 37895d4c-764c-4c0f-afa5-271839d776ad
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Availability Change Status' = ```
+			
+			IF (
+			    ISBLANK('Sales Report'[ZB:Last Availability Date Confirmed]),
+			    "No availability change",
+			    IF (
+			        ISBLANK('Sales Report'[ZC:Previous Availability Date]),
+			        "1 availability change(ZB)",
+			        "2+ availability changes(ZC)"
+			    )
+			)
+			
+			```
+		lineageTag: bd9c6553-4e2a-4862-81f0-065b5484436d
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Delivery Status Weighted' =
+			
+			VAR ZD = SELECTEDVALUE('Sales Report'[ZD:Stock Availability Date])
+			VAR DaysDiff = SELECTEDVALUE('Sales Report'[Working Days Diff Ana])
+			RETURN
+			    IF(
+			        ISBLANK(ZD),
+			        "DELAYED",
+			        IF(DaysDiff <= 0, "ON TIME", "DELAYED")
+			    )
+		lineageTag: a2c4ba0f-d507-4492-9bb8-0af7adc4a638
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Qty On Time' = ```
+			
+			CALCULATE(
+			    SUM('Sales Report'[Del Confirm Quantity]),
+			    FILTER(
+			        'Sales Report',
+			        NOT(ISBLANK('Sales Report'[ZD:Stock Availability Date])) &&
+			        'Sales Report'[Working Days Diff Ana] <= 0
+			    )
+			)
+			
+			```
+		lineageTag: ccd1d7fc-ce69-40df-8a1a-f55e8269b4e8
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Qty Delayed' =
+			
+			CALCULATE(
+			    SUM('Sales Report'[Del Confirm Quantity]),
+			    FILTER(
+			        'Sales Report',
+			        ISBLANK('Sales Report'[ZD:Stock Availability Date]) ||
+			        'Sales Report'[Working Days Diff Ana] > 0
+			    )
+			)
+		lineageTag: deca7ea2-cc70-4b8e-8ecb-b1a573f5f569
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Qty Delayed  porcentage' =
+			
+			CALCULATE(
+			    SUM('Sales Report'[Del Confirm Quantity]),
+			    FILTER(
+			        'Sales Report',
+			        ISBLANK('Sales Report'[ZD:Stock Availability Date]) ||
+			        'Sales Report'[Working Days Diff Ana] > 0
+			    )
+			)
+		lineageTag: 4240a56b-8c57-4475-9af3-cae05d1d3244
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Delivery Status Simple Ana Draw' = ```
+			
+			VAR ZD = 'Sales Report'[ZD:Stock Availability Date]
+			VAR DaysDiff = 'Sales Report'[Working Days Diff Ana]
+			RETURN
+			    IF(
+			        ISBLANK(ZD),
+			        "DELAYED",
+			        IF(DaysDiff <= 0, "ON TIME", "DELAYED")
+			    )
+			
+			
+			```
+		lineageTag: 5365af54-8e65-450b-9d53-1f87e5bfaee7
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Actual Good Issue EN' = ```
+			FORMAT('Sales Report'[Actual Good Issue Date], "dd mmm yyyy", "en-US")
+			
+			```
+		dataType: string
+		lineageTag: 7dbc40b7-2db8-45c3-8965-93de5ec3dbc1
+		summarizeBy: none
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Working Days Diff Ana new' = ```
+			
+			VAR StartDate = 'Sales Report'[ZA:Factory Confirmed date]
+			VAR EndDate = 'Sales Report'[ZD:Stock Availability Date]
+			VAR Direction = SIGN(DATEDIFF(StartDate, EndDate, DAY))
+			RETURN
+			    IF(
+			        ISBLANK(EndDate),
+			        -3400,
+			        Direction *
+			        CALCULATE(
+			            COUNTROWS('Calendar'),
+			            'Calendar'[Date] >= MIN(StartDate, EndDate),
+			            'Calendar'[Date] <= MAX(StartDate, EndDate),
+			            'Calendar'[IsWorkingDay] = TRUE
+			        )
+			    )
+			
+			```
+		formatString: 0
+		lineageTag: 24bb2e94-9869-4d8f-b7e4-f7259fc6c5d8
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Purchasing Document empty' = ```
+			
+			IF(
+			    ISBLANK('Sales Report'[Purchasing Document]),
+			    1,
+			    BLANK()
+			)
+			
+			```
+		formatString: 0
+		lineageTag: f1113936-2c69-4b2a-b77a-9f941d7311db
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Exclure Mois en Cours' = ```
+			
+			VAR DateLigne = 'Sales Report'[ZA:Factory Confirmed date]  -- ou une autre colonne de date pertinente
+			RETURN
+			IF(
+			    MONTH(DateLigne) = MONTH(TODAY()) &&
+			    YEAR(DateLigne) = YEAR(TODAY()),
+			    BLANK(),  -- ou "Exclu", selon ce que tu veux afficher
+			    1
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 2cee81f7-f5fd-41d7-b95b-926da4103bac
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Current Month' = ```
+			
+			VAR DateLigne = 'Sales Report'[ZA:Factory Confirmed date]  -- ou une autre colonne de date pertinente
+			RETURN
+			IF(
+			    MONTH(DateLigne) = MONTH(TODAY()) &&
+			    YEAR(DateLigne) = YEAR(TODAY()),
+			    BLANK(),  -- ou "Exclu", selon ce que tu veux afficher
+			    "Current Month"
+			)
+			
+			```
+		lineageTag: 772a2ab8-d0c2-47d3-9655-f956d070678e
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Current Month Actual' =
+			
+			VAR DateLigne = 'Sales Report'[Actual Good Issue Date]  -- ou une autre colonne de date pertinente
+			RETURN
+			IF(
+			    MONTH(DateLigne) = MONTH(TODAY()) &&
+			    YEAR(DateLigne) = YEAR(TODAY()),
+			    BLANK(),  -- ou "Exclu", selon ce que tu veux afficher
+			    "Current Month"
+			)
+		lineageTag: b0c04f48-8c91-4814-83e0-92d0a681b316
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Customer vs ZA statut' =
+			
+			IF (
+			    ISBLANK('Sales Report'[Cust req. Date]) || ISBLANK('Sales Report'[ZA:Factory Confirmed date]),
+			    BLANK(),
+			    IF (
+			        'Sales Report'[ZA:Factory Confirmed date] > 'Sales Report'[Cust req. Date],
+			        "3 DELAYED",
+			        IF (
+			            'Sales Report'[ZA:Factory Confirmed date] < 'Sales Report'[Cust req. Date],
+			            "1 ADVANCE",
+			            "2 ON TIME"
+			        )
+			    )
+			)
+		lineageTag: f06cce94-7a75-4426-9f2e-7d362cbe6aab
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Ecart_Jours Req.Cust.Date/ZA' = ```
+			
+			IF (
+			    ISBLANK('Sales Report'[ZA:Factory Confirmed date]) || ISBLANK('Sales Report'[Cust req. Date]),
+			    BLANK(),
+			    DATEDIFF(
+			        'Sales Report'[ZA:Factory Confirmed date], 
+			        'Sales Report'[Cust req. Date], 
+			        DAY
+			    )
+			)
+			```
+		formatString: 0
+		lineageTag: 4fd494ff-76dc-481a-b242-89abfdcd9dcc
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column ZA_ZD_without_ZC_ZB = ```
+			
+			IF (
+			    NOT ISBLANK('Sales Report'[ZA:Factory Confirmed date]) &&
+			    ISBLANK('Sales Report'[ZC:Previous availability date]) &&
+			    ISBLANK('Sales Report'[ZB:Last Availability Date Confirmed]),
+			    "OK",
+			    "NOT OK"
+			)
+			
+			```
+		lineageTag: a55f5607-00c7-4ae8-8f6b-8b077af2566c
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Catégorie ZA/ZB/ZC' =
+			
+			SWITCH(
+			    TRUE(),
+			    ISBLANK('Sales Report'[ZA:Factory Confirmed date]), "No ZA",
+			    NOT ISBLANK('Sales Report'[ZA:Factory Confirmed date]) &&
+			    ISBLANK('Sales Report'[ZB:Last Availability Date Confirmed]) &&
+			    ISBLANK('Sales Report'[ZC:Previous availability date]), "Only ZA",
+			    NOT ISBLANK('Sales Report'[ZA:Factory Confirmed date]) &&
+			    NOT ISBLANK('Sales Report'[ZB:Last Availability Date Confirmed]) &&
+			    ISBLANK('Sales Report'[ZC:Previous availability date]), "ZA & ZB",
+			    NOT ISBLANK('Sales Report'[ZA:Factory Confirmed date]) &&
+			    NOT ISBLANK('Sales Report'[ZB:Last Availability Date Confirmed]) &&
+			    NOT ISBLANK('Sales Report'[ZC:Previous availability date]), "ZA & ZB & ZC",
+			    "Autre"
+			)
+		lineageTag: c1d9def9-aef4-47a0-b738-b4637bd46087
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column SOITEM2 = 'Sales Report'[DSO Sales Order] & " - " & 'Sales Report'[SO Item]
+		lineageTag: ca4fd222-c068-41d9-b824-bfe7e82bfead
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Doublon = ```
+			
+			VAR CurrentValue = 'Sales Report'[SOITEM2]
+			VAR CountSame = 
+			    CALCULATE(
+			        COUNTROWS('Sales Report'),
+			        FILTER('Sales Report', 'Sales Report'[SOITEM2] = CurrentValue)
+			    )
+			RETURN IF(CountSame > 1, "Doublon", "Unique")
+			```
+		lineageTag: ab54fb43-c393-403d-9fdc-507eb9e68855
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column RangDoublon =
+			
+			RANKX(
+			    FILTER(
+			        'Sales Report',
+			        'Sales Report'[SOITEM2] = EARLIER('Sales report'[SOITEM2])
+			    ),
+			    'Sales Report'[Outbound delivery],
+			    ,
+			    ASC
+			)
+		formatString: 0
+		lineageTag: eae75736-34bf-466c-9c27-d3409d42e353
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column VérificationDoublon = ```
+			
+			IF(
+			    'Sales Report'[Doublon] = "Unique" || 
+			    ('Sales Report'[Doublon] = "Doublon" && 'Sales Report'[RangDoublon] = 1),
+			    "OK",
+			    "NOK"
+			)
+			
+			```
+		lineageTag: ed9a1f36-c4ba-4a12-8157-3bcec1ddb323
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Working Days Diff Ana ZB' =
+			
+			VAR StartDate = 'Sales Report'[ZB:Last Availability Date Confirmed]
+			VAR EndDate = 'Sales Report'[ZD:Stock Availability Date]
+			VAR Direction = SIGN(DATEDIFF(StartDate, EndDate, DAY))
+			RETURN
+			    IF(
+			        ISBLANK(EndDate),
+			        -3400,
+			        Direction *
+			        CALCULATE(
+			            COUNTROWS('Calendar'),
+			            'Calendar'[Date] >= MIN(StartDate, EndDate),
+			            'Calendar'[Date] <= MAX(StartDate, EndDate),
+			            'Calendar'[IsWorkingDay] = TRUE
+			        )
+			    )
+		formatString: 0
+		lineageTag: c01d7fb6-9c43-4a4c-b474-d1035b4afedf
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Delivery Status Simple ZB' =
+			
+			VAR ZD = 'Sales Report'[ZD:Stock Availability Date]
+			VAR DaysDiff = 'Sales Report'[Working Days Diff Ana ZB]
+			RETURN
+			    IF(
+			        ISBLANK(ZD),
+			        "DELAYED",
+			        IF(DaysDiff <= 0, "ON TIME", "DELAYED")
+			    )
+		lineageTag: 32181add-d387-477a-a1a6-2c035fc3a502
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column ZA_Passee = ```
+			
+			IF(
+			    'Sales Report'[ZA:Factory Confirmed date] <= TODAY(),
+			    "OK",
+			    "NOK"
+			)
+			
+			```
+		lineageTag: eaf17221-8dbf-4881-8691-97a6f19c00d9
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Working Days Diff Ana Daily' = ```
+			
+			VAR Supplier = 'Sales Report'[Supplier Name]
+			VAR ZA = 'Sales Report'[ZA:Factory Confirmed date]
+			VAR ZB = 'Sales Report'[ZB:Last Availability Date Confirmed]
+			VAR ZD = 'Sales Report'[ZD:Stock Availability Date]
+			
+			VAR StartDate =
+			    SWITCH(
+			        TRUE(),
+			        Supplier IN { "CARRIER MONTILLA, S.A.", "CARRIER CULOZ SA" }, ZA,
+			        Supplier = "CARRIER MONTLUEL SCS" && ISBLANK(ZB), ZA,
+			        Supplier = "CARRIER MONTLUEL SCS" && ZB <= ZA, ZB,
+			        Supplier = "CARRIER MONTLUEL SCS" && ZB > ZA, ZA,
+			        ZB // valeur par défaut si aucune condition n'est remplie
+			    )
+			
+			VAR EndDate = ZD
+			VAR Direction = SIGN(DATEDIFF(StartDate, EndDate, DAY))
+			
+			RETURN
+			    IF(
+			        ISBLANK(EndDate),
+			        -3400,
+			        Direction *
+			        CALCULATE(
+			            COUNTROWS('Calendar'),
+			            'Calendar'[Date] >= MIN(StartDate, EndDate),
+			            'Calendar'[Date] <= MAX(StartDate, EndDate),
+			            'Calendar'[IsWorkingDay] = TRUE
+			        )
+			    )
+			
+			```
+		formatString: 0
+		lineageTag: cf120aa2-7a70-485c-9a00-a9898b798baa
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Delivery Status Simple Ana daily' = ```
+			
+			VAR ZD = 'Sales Report'[ZD:Stock Availability Date]
+			VAR DaysDiff = 'Sales Report'[Working Days Diff Ana Daily]
+			RETURN
+			    IF(
+			        ISBLANK(ZD),
+			        "DELAYED",
+			        IF(DaysDiff <= 0, "ON TIME", "DELAYED")
+			    )
+			
+			```
+		lineageTag: 3ff82821-b966-4da1-95af-38024659ed21
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Delivery Delay Category Daily' =
+			
+			VAR DaysDiff = 'Sales Report'[Working Days Diff Ana Daily]
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        DaysDiff <= -3000, "NO ZD",
+			        DaysDiff <= -40, "40+ days advance",
+			        DaysDiff <= -20, "20-39 days advance",
+			        DaysDiff <= -10, "10-19 days advance",
+			        DaysDiff <= -6, "6-9 days advance",
+			        DaysDiff <= -1, "1-5 days advance",
+			        DaysDiff = 0, "On Time",
+			        DaysDiff <= 5, "1-5 days delay",
+			        DaysDiff <= 9, "6-9 days delay",
+			        DaysDiff <= 19, "10-19 days delay",
+			        DaysDiff <= 39, "20-39 days delay",
+			        DaysDiff >= 40, "40+ days delay",
+			        "KO"
+			    )
+		lineageTag: 3112bdc3-b869-4a43-a530-b77a49b12752
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Delivery Delay Sort Order' = ```
+			
+			SWITCH(
+			    'Sales Report'[Delivery Delay Category Daily],
+			    "NO ZD", 0,
+			    "40+ days advance", 1,
+			    "20-39 days advance", 2,
+			    "10-19 days advance", 3,
+			    "6-9 days advance", 4,
+			    "1-5 days advance", 5,
+			    "On Time", 6,
+			    "1-5 days delay", 7,
+			    "6-9 days delay", 8,
+			    "10-19 days delay", 9,
+			    "20-39 days delay", 10,
+			    "40+ days delay", 11,
+			    99
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 523d47bf-fb0b-44f6-abe7-87257aabbb33
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Quantity ON TIME' =
+			
+			IF(
+			    'Sales Report'[Delivery Status Simple Ana daily] = "ON TIME",
+			    'Sales Report'[Confirmed Quantity],
+			    0
+			)
+		lineageTag: c2982265-146a-468c-a771-3cc339bc1002
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Quantity DELAYED' =
+			
+			IF(
+			    'Sales Report'[Delivery Status Simple Ana daily] = "DELAYED",
+			    'Sales Report'[Confirmed Quantity],
+			    0
+			)
+		lineageTag: 7078dd2f-5dcb-4fbe-8bb2-adc1671bb572
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Sales District'
+		dataType: string
+		lineageTag: a3af0c18-8afa-4f55-ae4c-0cf60b869675
+		summarizeBy: none
+		sourceColumn: Sales District
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cust.GRP5 Description'
+		dataType: string
+		lineageTag: 10223541-b76a-4c92-a0cf-6bc3e4630480
+		summarizeBy: none
+		sourceColumn: Cust.GRP5 Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Number days Created ZA (ouvrés, inclut départ)' =
+			
+			VAR CreationDate = DATEVALUE ( 'Sales Report'[SO Creation Date] )
+			VAR FactoryDate  = DATEVALUE ( 'Sales Report'[ZA:Creation Date] )
+			VAR MinD = MIN ( CreationDate, FactoryDate )
+			VAR MaxD = MAX ( CreationDate, FactoryDate )
+			VAR Sign = IF ( FactoryDate >= CreationDate, 1, -1 )
+			RETURN
+			IF (
+			    ISBLANK ( FactoryDate ) || ISBLANK ( CreationDate ),
+			    BLANK (),
+			    Sign *
+			        CALCULATE (
+			            COUNTROWS ( 'Calendar' ),
+			            FILTER (
+			                'Calendar',
+			                'Calendar'[Date] >= MinD
+			                    && 'Calendar'[Date] <= MaxD
+			                    && 'Calendar'[IsWorkingDay] = TRUE ()
+			            )
+			        )
+			)
+		formatString: 0
+		lineageTag: 84f7f8fe-5ba0-4f49-a71e-378cfa361332
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Year SO creation Date' =
+			
+			DATE (
+			    YEAR ( 'Sales Report'[SO Creation Date] ),
+			    MONTH ( 'Sales Report'[SO Creation Date] ),
+			    1
+			)
+		formatString: mmmm yyyy
+		lineageTag: 9b4ef598-7300-411f-8a7d-d75b11c5939b
+		summarizeBy: none
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'ZA:Creation Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 79926410-0b0c-40fc-8ea3-559b8da2eeb3
+		summarizeBy: none
+		sourceColumn: ZA:Creation Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'ZB:Creation Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 0d5c6759-6a74-4cf1-b857-f65fb1fb51af
+		summarizeBy: none
+		sourceColumn: ZB:Creation Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'ZC:Creation Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 319547be-2394-4c9c-890e-2e47de3be84c
+		summarizeBy: none
+		sourceColumn: ZC:Creation Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'ZD:Creation Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 0535a13a-682a-4c18-be1f-835ef638bb85
+		summarizeBy: none
+		sourceColumn: ZD:Creation Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Tranche Number days Created ZA' =
+			
+			VAR NbJours = 'Sales Report'[Number days Created ZA (ouvrés, inclut départ)]
+			RETURN
+			IF (
+			    ISBLANK(NbJours),
+			    BLANK(),
+			    SWITCH (
+			        TRUE(),
+			        NbJours >= 0  && NbJours <= 5,      "0 à 5",
+			        NbJours > 5  && NbJours <= 10,     "5 à 10",
+			        NbJours > 10 && NbJours <= 30,     "10 à 30",
+			        NbJours > 30 && NbJours <= 50,     "30 à 50",
+			        NbJours > 50 && NbJours <= 75,     "50 à 75",
+			        NbJours > 75 && NbJours <= 100,    "75 à 100",
+			        NbJours > 100 && NbJours <= 150,   "100 à 150",
+			        NbJours > 150 && NbJours <= 200,   "150 à 200",
+			        "> 200"
+			    )
+			)
+		lineageTag: 0a5e7b23-8b4b-405a-9b1d-e4213c874dec
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tranche Number days Created ZA - Ordre' =
+			
+			VAR NbJours = 'Sales Report'[Number days Created ZA (ouvrés, inclut départ)]
+			RETURN
+			IF (
+			    ISBLANK ( NbJours ),
+			    BLANK (),
+			    SWITCH (
+			        TRUE (),
+			        NbJours >= 0   && NbJours <= 5,    "1 0 à 5",
+			        NbJours > 5    && NbJours <= 10,   "2 5 à 10",
+			        NbJours > 10   && NbJours <= 30,   "3 10 à 30",
+			        NbJours > 30   && NbJours <= 50,   "4 30 à 50",
+			        NbJours > 50   && NbJours <= 75,   "5 50 à 75",
+			        NbJours > 75   && NbJours <= 100,  "6 75 à 100",
+			        NbJours > 100  && NbJours <= 150,  "7 100 à 150",
+			        NbJours > 150  && NbJours <= 200,  "8 150 à 200",
+			        "9 > 200"
+			    )
+			)
+		lineageTag: da702d06-63a7-4117-85ca-0d275c0da144
+		summarizeBy: none
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Famille =
+			
+			COALESCE(
+			    LOOKUPVALUE(
+			        Familly[Famille],
+			        Familly[Article], 'Sales Report'[Material]
+			    ),
+			    "Non renseigné"
+			)
+		lineageTag: 0c6be089-4835-49f0-84d4-b0110db9a4c6
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ZD Mois Year' =
+			
+			DATE(
+			    YEAR('Sales Report'[ZD:Stock Availability Date]),
+			    MONTH('Sales Report'[ZD:Stock Availability Date]),
+			    1
+			)
+		formatString: yyyy-mm
+		lineageTag: f99e14f7-203a-49cd-b401-7dad553a4c85
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'ZD current Month' =
+			
+			VAR d = 'Sales Report'[ZD:Stock Availability Date]
+			RETURN
+			IF(
+			    NOT ISBLANK(d)
+			        && YEAR(d) = YEAR(TODAY())
+			        && MONTH(d) = MONTH(TODAY()),
+			    TRUE(),
+			    FALSE()
+			)
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 678b4da6-587b-49d6-924f-2a6f9a0fcde4
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column BucketMonth =
+			
+			VAR MonthStartToday = DATE(YEAR(TODAY()), MONTH(TODAY()), 1)
+			VAR CustMonthStart =
+			    DATE(YEAR('Sales Report'[Cust req. Date]), MONTH('Sales Report'[Cust req. Date]), 1)
+			RETURN
+			IF(CustMonthStart < MonthStartToday, MonthStartToday, CustMonthStart)
+		formatString: General Date
+		lineageTag: 4f1316ab-3ae9-484c-805c-cfe067f482b5
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Sales Report' = m
+		mode: import
+		source =
+				let
+				    Source = SharePoint.Files("https://carcgl.sharepoint.com/sites/MD_Power_BI", [ApiVersion = 15]),
+				    #"Lignes filtrées" = Table.SelectRows(Source, each ([Folder Path] = "https://carcgl.sharepoint.com/sites/MD_Power_BI/Shared Documents/chantier/20_ Customer Care/01_MAIN_Table/20_Avail_Sales_Report_All_Suppliers/")),
+				    #"Lignes filtrées1" = Table.SelectRows(#"Lignes filtrées", each ([Folder Path] = "https://carcgl.sharepoint.com/sites/MD_Power_BI/Shared Documents/chantier/20_ Customer Care/01_MAIN_Table/20_Avail_Sales_Report_All_Suppliers/")),
+				    #"Fichiers masqués filtrés1" = Table.SelectRows(#"Lignes filtrées1", each [Attributes]?[Hidden]? <> true),
+				    #"Appeler une fonction personnalisée1" = Table.AddColumn(#"Fichiers masqués filtrés1", "Transformer le fichier", each #"Transformer le fichier"([Content])),
+				    #"Colonnes renommées1" = Table.RenameColumns(#"Appeler une fonction personnalisée1", {"Name", "Source.Name"}),
+				    #"Autres colonnes supprimées1" = Table.SelectColumns(#"Colonnes renommées1", {"Source.Name", "Transformer le fichier"}),
+				    #"Colonne de tables développée1" = Table.ExpandTableColumn(#"Autres colonnes supprimées1", "Transformer le fichier", Table.ColumnNames(#"Transformer le fichier"(#"Exemple de fichier"))),
+				
+				    // Nettoyage ciblé de 00.00.0000 uniquement sur les 4 colonnes Creation Date
+				    #"remplacer 00.00.0000 date" = Table.ReplaceValue(
+				        #"Colonne de tables développée1",
+				        "00.00.0000",
+				        "",
+				        Replacer.ReplaceText,
+				        {"ZA:Creation Date", "ZB:Creation Date", "ZC:Creation Date", "ZD:Creation Date"}
+				    ),
+				
+				    #"rempalcer Volume" = Table.ReplaceValue(#"remplacer 00.00.0000 date",".","",Replacer.ReplaceText,{"Volume"}),
+				    #"Valeur remplacée1" = Table.ReplaceValue(#"rempalcer Volume",".","",Replacer.ReplaceText,{"Net weight of delivered item", "Gross weight of delivered item", "Volume of delivered item", "Volume unit of delivered item"}),
+				    #"Valeur remplacée" = Table.ReplaceValue(#"Valeur remplacée1",".","",Replacer.ReplaceText,{"Sales Value (Unit price)", "Net Value", "DSO PO price", "IC Invoice Net Value", "Invoice net Value", "Taxes"}),
+				    #"Valeur remplacée2" = Table.ReplaceValue(#"Valeur remplacée",".","",Replacer.ReplaceText,{"Order Quantity", "Sales Value (Unit price)", "Net Value", "Del Confirm Quantity", "IC Invoice Net Value", "Invoice net Value", "Taxes"}),
+				
+				    // Conversion avec gestion d'erreurs pour les nombres et dates
+				    #"Type modifié2" = Table.TransformColumns(#"Valeur remplacée2", {
+				        {"IC Invoice Net Value", each try Number.From(_) otherwise null, type number},
+				        {"Taxes", each try Number.From(_) otherwise null, type number},
+				        {"Invoice net Value", each try Number.From(_) otherwise null, type number},
+				        {"Sales Value (Unit price)", each try Number.From(_) otherwise null, type number},
+				        {"Net Value", each try Number.From(_) otherwise null, type number},
+				        {"Order Quantity", each try Number.From(_) otherwise null, type number},
+				        {"Del Confirm Quantity", each try Number.From(_) otherwise null, type number},
+				        {"Cust req. Date", each try Date.From(_) otherwise null, type date},
+				        {"Del Confirm Date 1", each try Date.From(_) otherwise null, type date}
+				    }),
+				
+				    // FILTRE USINE: si Supplier name est présent -> filtre sur Supplier name,
+				    // sinon -> filtre sur Shipped From (3 valeurs autorisées)
+				    #"Usine uniquement" =
+				        Table.SelectRows(
+				            #"Type modifié2",
+				            each
+				                let
+				                    supplier = try Text.Upper(Text.Trim(Text.From([Supplier name]))) otherwise null,
+				                    shipped  = try Text.Upper(Text.Trim(Text.From([Shipped From]))) otherwise null
+				                in
+				                    (
+				                        supplier <> null and supplier <> ""
+				                        and List.Contains(
+				                            {"CARRIER CULOZ SA", "CARRIER MONTILLA, S.A.", "CARRIER MONTLUEL SCS"},
+				                            supplier
+				                        )
+				                    )
+				                    or
+				                    (
+				                        (supplier = null or supplier = "")
+				                        and List.Contains(
+				                            {
+				                                "FR02 HVAC MONTILLA SHIPPING POINT",
+				                                "FR04 HVAC CULOZ SHIPPING POINT",
+				                                "FR03 HVAC MONTLUEL SHIPPING POINT"
+				                            },
+				                            shipped
+				                        )
+				                    )
+				        ),
+				
+				    // FILTRE Reason of rejection: vide/null OU dans {ZA,ZB,ZC,ZD,ZF,ZG,ZH,ZI,ZK,ZL}
+				    #"Filtre Reason of rejection" =
+				        Table.SelectRows(
+				            #"Usine uniquement",
+				            each
+				                let
+				                    r = try Text.Upper(Text.Trim(Text.From([#"Reason for rejection"]))) otherwise null
+				                in
+				                    r = null
+				                    or r = ""
+				                    or List.Contains(
+				                        {"ZA","ZB","ZC","ZD","ZF","ZG","ZH","ZI","ZK","ZL"},
+				                        r
+				                    )
+				        ),
+				
+				    #"Type modifié3" = Table.TransformColumns(#"Filtre Reason of rejection", {
+				        {"DSO PO price", each try Number.From(_) otherwise null, type number},
+				        {"Confirmed Quantity", each try Number.From(_) otherwise null, type number}
+				    }),
+				
+				    #"Type modifié" = Table.TransformColumns(#"Type modifié3", {
+				        {"Sales Value (Unit price)", each try Number.From(_) otherwise null, type number},
+				        {"Net Value", each try Number.From(_) otherwise null, type number},
+				        {"DSO PO price", each try Number.From(_) otherwise null, type number},
+				        {"IC Invoice Net Value", each try Number.From(_) otherwise null, type number},
+				        {"Invoice net Value", each try Number.From(_) otherwise null, type number},
+				        {"Taxes", each try Number.From(_) otherwise null, type number},
+				        {"PO Req Delievry date", each try Date.From(_) otherwise null, type date},
+				        {"ZA:Factory Confirmed date", each try Date.From(_) otherwise null, type date},
+				        {"ZA:Creation Date", each try Date.From(_) otherwise null, type date},
+				        {"ZB:Last Availability Date Confirmed", each try Date.From(_) otherwise null, type date},
+				        {"ZB:Creation Date", each try Date.From(_) otherwise null, type date},
+				        {"ZC:Previous availability date", each try Date.From(_) otherwise null, type date},
+				        {"ZC:Creation Date", each try Date.From(_) otherwise null, type date},
+				        {"ZD:Stock Availability Date", each try Date.From(_) otherwise null, type date},
+				        {"ZD:Creation Date", each try Date.From(_) otherwise null, type date},
+				        {"External Vendor Conf. Date", each try Date.From(_) otherwise null, type date},
+				        {"External Vendor GR Date", each try Date.From(_) otherwise null, type date},
+				        {"OBD Document Date", each try Date.From(_) otherwise null, type date},
+				        {"Planned Goods Issue Date", each try Date.From(_) otherwise null, type date},
+				        {"Required DSO / JV Date on site", each try Date.From(_) otherwise null, type date},
+				        {"Confirmed Date from HVAC", each try Date.From(_) otherwise null, type date},
+				        {"Pick up date Planned", each try Date.From(_) otherwise null, type date},
+				        {"Actual Good Issue Date", each try Date.From(_) otherwise null, type date},
+				        {"Real Delivery date", each try Date.From(_) otherwise null, type date},
+				        {"IC Invoice Date", each try Date.From(_) otherwise null, type date},
+				        {"Invoice date", each try Date.From(_) otherwise null, type date}
+				    }),
+				
+				    #"DSO delivery date required" = Table.AddColumn(#"Type modifié", "DSO delivery date Required", each
+				        try (Date.Month([#"Required DSO / JV Date on site"]) = Date.Month(DateTime.LocalNow())
+				        and Date.Year([#"Required DSO / JV Date on site"]) = Date.Year(DateTime.LocalNow()))
+				        otherwise false),
+				
+				    #"ZB Current month" = Table.AddColumn(#"DSO delivery date required", "ZB Current month", each
+				        try (Date.Month([#"ZB:Last Availability Date Confirmed"]) = Date.Month(DateTime.LocalNow())
+				        and Date.Year([#"ZB:Last Availability Date Confirmed"]) = Date.Year(DateTime.LocalNow()))
+				        otherwise false),
+				
+				    #"ZD Current month" = Table.AddColumn(#"ZB Current month", "ZD Current month", each
+				        try (Date.Month([#"ZD:Stock Availability Date"]) = Date.Month(DateTime.LocalNow())
+				        and Date.Year([#"ZD:Stock Availability Date"]) = Date.Year(DateTime.LocalNow()))
+				        otherwise false),
+				
+				    #"Planned good issue Current month" = Table.AddColumn(#"ZD Current month", "Planned Goods Issue", each
+				        try (Date.Month([Planned Goods Issue Date]) = Date.Month(DateTime.LocalNow())
+				        and Date.Year([Planned Goods Issue Date]) = Date.Year(DateTime.LocalNow()))
+				        otherwise false),
+				
+				    #"ZA Current month" = Table.AddColumn(#"Planned good issue Current month", "Personnalisé", each
+				        try (Date.Month([#"ZA:Factory Confirmed date"]) = Date.Month(DateTime.LocalNow())
+				        and Date.Year([#"ZA:Factory Confirmed date"]) = Date.Year(DateTime.LocalNow()))
+				        otherwise false),
+				
+				    #"Invoice Planned Current  Month" = Table.AddColumn(#"ZA Current month", "Invoiced Date Current month", each
+				        try (Date.Month([IC Invoice Date]) = Date.Month(DateTime.LocalNow())
+				        and Date.Year([IC Invoice Date]) = Date.Year(DateTime.LocalNow()))
+				        otherwise false),
+				
+				    #"Colonnes renommées2" = Table.RenameColumns(#"Invoice Planned Current  Month",{{"Personnalisé", "ZA Current Month T/F"}}),
+				    #"Type modifié1" = Table.TransformColumnTypes(#"Colonnes renommées2",{{"DSO delivery date Required", type logical}, {"ZB Current month", type logical}, {"ZD Current month", type logical}, {"Planned Goods Issue", type logical}, {"ZA Current Month T/F", type logical}, {"Invoiced Date Current month", type logical}}),
+				    #"Colonnes renommées" = Table.RenameColumns(#"Type modifié1",{{"Planned Goods Issue", "Planned Goods Issue Current month T/F"}, {"ZD Current month", "ZD Current month T/F"}, {"ZB Current month", "ZB Current month T/F"}, {"DSO delivery date Required", "DSO delivery date Required T/F"}, {"Invoiced Date Current month", "Invoiced Date Current month T/F"}, {"Currency_1", "Money"}}),
+				    #"Erreurs remplacées1" = Table.ReplaceErrorValues(#"Colonnes renommées", {{"Source.Name", ""}}),
+				
+				    // Les colonnes ZA/ZB/ZC/ZD:Creation Date NE SONT PLUS SUPPRIMÉES ICI
+				    #"Colonnes supprimées" = Table.RemoveColumns(#"Erreurs remplacées1",{
+				        "Sales Rep 1 Commission  %",
+				        "Sales Rep 2",
+				        "Sales Rep 2 name 1",
+				        "Sales Rep 2 Commission  %",
+				        "Sales Rep 3",
+				        "Sales Rep 3 name1",
+				        "Sales Rep 3 Commission %",
+				        "Sales Rep 4",
+				        "Sales Rep 4 name1",
+				        "Sales Rep 4 Commission %",
+				        "Sales Rep 5",
+				        "Sales Rep 5 name1",
+				        "Sales Rep 5 Commission %",
+				        "STO Number",
+				        "STO Item",
+				        "Storage loc. STO",
+				        "STO Supplier",
+				        "Supplier name STO",
+				        "STO Pur. Price per unit",
+				        // "ZA:Creation Date",       <-- supprimé de la liste
+				        // "ZB:Creation Date",       <-- supprimé de la liste
+				        // "ZC:Creation Date",       <-- supprimé de la liste
+				        // "ZD:Creation Date",       <-- supprimé de la liste
+				        "External Vendor Conf. Date",
+				        "AB Reference",
+				        "External Vendor GR Date",
+				        "Customer Group 5",
+				        "Ship-to party",
+				        "Ship-to name1",
+				        "Ship-to name2",
+				        "Street",
+				        "City",
+				        "Postal Code",
+				        "Ship-To Comment",
+				        "End user",
+				        "End-user name1",
+				        "End-user name2",
+				        "End-user City",
+				        "End-user Postal Code",
+				        "End-user Street",
+				        "End user Country",
+				        "Engineering code",
+				        "Engineering Code name 1",
+				        "Internal Prescriber",
+				        "Internal Prescriber name 1",
+				        "Employee Resp.",
+				        "Employee Resp. name1",
+				        "Tax Code",
+				        "Tax code desc",
+				        "Ext. Sales agent 1",
+				        "Ext. Sales agent 1 name 1",
+				        "Ext. Sales agent 1 Commission  %",
+				        "Ext. Sales agent 2",
+				        "Ext. Sales agent 2 name1",
+				        "Ext. Sales agent 2 Commission  %",
+				        "Credit Status",
+				        "Credit Status D.",
+				        "Blocked for MRP",
+				        "User Status"
+				    }),
+				
+				    #"Valeur remplacée3" = Table.ReplaceValue(#"Colonnes supprimées","0000","",Replacer.ReplaceText,{"DSO Sales Order", "SO Item"}),
+				
+				    #"Type modifié4" = Table.TransformColumns(#"Valeur remplacée3", {
+				        {"DSO Sales Order", each try Int64.From(_) otherwise null, Int64.Type},
+				        {"SO Item", each try Int64.From(_) otherwise null, Int64.Type}
+				    }),
+				
+				    #"Valeur remplacée4" = Table.ReplaceValue(#"Type modifié4","00000","",Replacer.ReplaceText,{"Factory SO Item No"}),
+				    #"Valeur remplacée5" = Table.ReplaceValue(#"Valeur remplacée4","00000","",Replacer.ReplaceText,{"Supplier"}),
+				    #"Valeur remplacée6" = Table.ReplaceValue(#"Valeur remplacée5",".","/",Replacer.ReplaceText,{"SO Creation Date"}),
+				    #"Type modifié5" = Table.TransformColumnTypes(#"Valeur remplacée6",{{"SO Creation Date", type date}}),
+				    #"Lignes filtrées2" = Table.SelectRows(#"Type modifié5", each ([Sales Document Type] = "ZOR" or [Sales Document Type] = "ZOR1" or [Sales Document Type] = "ZOR2" or [Sales Document Type] = "ZOR3"))
+				in
+				    #"Lignes filtrées2"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

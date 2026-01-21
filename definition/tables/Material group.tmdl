@@ -1,0 +1,36 @@
+table 'Material group'
+	lineageTag: 72f97280-4c5a-4920-807d-eb46579aa493
+
+	column Code
+		dataType: string
+		lineageTag: 7c97c665-d75f-4ba1-8860-61be69aebd92
+		summarizeBy: none
+		sourceColumn: Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description
+		dataType: string
+		lineageTag: 1824752c-6d29-499a-8d39-af1ba9db8146
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Material group' = m
+		mode: import
+		source =
+				let
+				    Source = SharePoint.Files("https://carcgl.sharepoint.com/sites/MD_Power_BI", [ApiVersion = 15]),
+				    #"Lignes filtrées" = Table.SelectRows(Source, each ([Name] = "Famille et material group.xlsx")),
+				    #"Famille et material group xlsx_https://carcgl sharepoint com/sites/MD_Power_BI/Shared Documents/chantier/20_ Customer Care/10_Customer Care KPI Dashboard/20_Tables/" = #"Lignes filtrées"{[Name="Famille et material group.xlsx",#"Folder Path"="https://carcgl.sharepoint.com/sites/MD_Power_BI/Shared Documents/chantier/20_ Customer Care/10_Customer Care KPI Dashboard/20_Tables/"]}[Content],
+				    #"Classeur Excel importé" = Excel.Workbook(#"Famille et material group xlsx_https://carcgl sharepoint com/sites/MD_Power_BI/Shared Documents/chantier/20_ Customer Care/10_Customer Care KPI Dashboard/20_Tables/"),
+				    #"Material Group_Sheet" = #"Classeur Excel importé"{[Item="Material Group",Kind="Sheet"]}[Data],
+				    #"En-têtes promus" = Table.PromoteHeaders(#"Material Group_Sheet", [PromoteAllScalars=true])
+				in
+				    #"En-têtes promus"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

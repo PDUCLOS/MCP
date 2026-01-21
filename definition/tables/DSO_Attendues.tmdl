@@ -1,0 +1,26 @@
+table DSO_Attendues
+	lineageTag: 9b2877b1-a4b3-4ee3-a375-fa8dff77af8a
+
+	column DSO
+		lineageTag: 096309d5-bf5b-42c3-88b0-ae4f24e80c80
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [DSO]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DSO_Attendues = calculated
+		mode: import
+		source = ```
+				DATATABLE(
+				    "DSO", STRING,
+				    {
+				        {"BE01"}, {"DE01"}, {"ES01"}, {"FR01"}, {"GB01"},
+				        {"LU01"}, {"NL01"}, {"PL01"}, {"PT01"}
+				    }
+				)
+				
+				```
+
+	annotation PBI_Id = 6f74e6bc95b44af7bebc25c3db28bfd5
+

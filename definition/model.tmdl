@@ -1,0 +1,76 @@
+model Model
+	culture: fr-FR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: fr-FR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+queryGroup 'Transformer le fichier à partir de Requête1'
+
+	annotation PBI_QueryGroupOrder = 0
+
+queryGroup 'Transformer le fichier à partir de Requête1\Requêtes d''assistance'
+
+	annotation PBI_QueryGroupOrder = 0
+
+queryGroup 'Transformer le fichier à partir de Requête1 (2)'
+
+	annotation PBI_QueryGroupOrder = 4
+
+queryGroup 'Transformer le fichier à partir de Requête1 (2)\Requêtes d''assistance'
+
+	annotation PBI_QueryGroupOrder = 0
+
+queryGroup 'Transformer le fichier à partir de Requête1 (3)'
+
+	annotation PBI_QueryGroupOrder = 6
+
+queryGroup 'Transformer le fichier à partir de Requête1 (3)\Requêtes d''assistance'
+
+	annotation PBI_QueryGroupOrder = 0
+
+queryGroup 'Transformer le fichier à partir de Requête1 (4)'
+
+	annotation PBI_QueryGroupOrder = 8
+
+queryGroup 'Transformer le fichier à partir de Requête1 (4)\Requêtes d''assistance'
+
+	annotation PBI_QueryGroupOrder = 0
+
+queryGroup 'Transformer le fichier à partir de GPS'
+
+	annotation PBI_QueryGroupOrder = 10
+
+queryGroup 'Transformer le fichier à partir de GPS\Requêtes d''assistance'
+
+	annotation PBI_QueryGroupOrder = 0
+
+queryGroup 'Transformer le fichier à partir de Requête1\Requêtes d''assistance\Transformer le fichier à partir de Requête1'
+
+	annotation PBI_QueryGroupOrder = 0
+
+queryGroup 'Transformer le fichier à partir de Requête1\Requêtes d''assistance\Transformer le fichier à partir de Requête1\Requêtes d''assistance'
+
+	annotation PBI_QueryGroupOrder = 0
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["Exemple de fichier","Paramètre1","Transformer l'exemple de fichier","Transformer le fichier","Sales Report","Calendar","Exemple de fichier (3)","Paramètre3","Transformer l'exemple de fichier (3)","Transformer le fichier (3)","GPS","Exemple de fichier (4)","Paramètre4","Transformer l'exemple de fichier (4)","Transformer le fichier (4)","Taux","Exemple de fichier (5)","Paramètre5","Transformer l'exemple de fichier (5)","Transformer le fichier (5)","Exemple de fichier (6)","Paramètre6","Transformer l'exemple de fichier (6)","Transformer le fichier (6)","Exemple de fichier (7)","Paramètre7","Transformer l'exemple de fichier (7)","Transformer le fichier (7)","Sales Report No filter","Material group","Familly"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Mesure
+ref table 'Sales Report'
+ref table GPS
+ref table Datum
+ref table Taux
+ref table Calendar
+ref table DSO_Attendues
+ref table 'Sales Report No filter'
+ref table 'Material group'
+ref table Familly
+ref table Date
+
+ref cultureInfo fr-FR
+

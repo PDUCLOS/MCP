@@ -1,0 +1,44 @@
+table Taux
+	lineageTag: 1b3e1df2-c0a7-405c-8cf9-0fdacf8aa7ea
+
+	column 'TAUX DE CONVERSION EUROS'
+		dataType: double
+		lineageTag: da2cdab4-1d61-4ece-8ddc-11b092684936
+		summarizeBy: none
+		sourceColumn: TAUX DE CONVERSION EUROS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MONNAIE
+		dataType: string
+		lineageTag: 9491a4e6-12a0-4815-ac7e-b648c48e1ef6
+		summarizeBy: none
+		sourceColumn: MONNAIE
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Taux = m
+		mode: import
+		source =
+				let
+				    Source = SharePoint.Files("https://carcgl.sharepoint.com/sites/MD_Power_BI", [ApiVersion = 15]),
+				    #"Lignes filtrées1" = Table.SelectRows(Source, each ([Folder Path] = "https://carcgl.sharepoint.com/sites/MD_Power_BI/Shared Documents/chantier/20_ Customer Care/10_Customer Care KPI Dashboard/20_Tables/")),
+				    #"Lignes filtrées" = Table.SelectRows(#"Lignes filtrées1", each ([Name] = "Taux de change_Customer_Care.csv")),
+				    #"Fichiers masqués filtrés1" = Table.SelectRows(#"Lignes filtrées", each [Attributes]?[Hidden]? <> true),
+				    #"Appeler une fonction personnalisée1" = Table.AddColumn(#"Fichiers masqués filtrés1", "Transformer le fichier (5)", each #"Transformer le fichier (5)"([Content])),
+				    #"Colonnes renommées1" = Table.RenameColumns(#"Appeler une fonction personnalisée1", {"Name", "Source.Name"}),
+				    #"Autres colonnes supprimées1" = Table.SelectColumns(#"Colonnes renommées1", {"Source.Name", "Transformer le fichier (5)"}),
+				    #"Colonne de tables développée1" = Table.ExpandTableColumn(#"Autres colonnes supprimées1", "Transformer le fichier (5)", Table.ColumnNames(#"Transformer le fichier (5)"(#"Exemple de fichier (5)"))),
+				    #"Type modifié" = Table.TransformColumnTypes(#"Colonne de tables développée1",{{"Source.Name", type text}, {"MONNAIE", type text}, {"TAUX DE CONVERSTION EUROS ", type number}}),
+				    #"Autres colonnes supprimées" = Table.SelectColumns(#"Type modifié",{"TAUX DE CONVERSTION EUROS ", "MONNAIE"}),
+				    #"Lignes vides supprimées" = Table.SelectRows(#"Autres colonnes supprimées", each not List.IsEmpty(List.RemoveMatchingItems(Record.FieldValues(_), {"", null}))),
+				    #"Colonnes renommées" = Table.RenameColumns(#"Lignes vides supprimées",{{"TAUX DE CONVERSTION EUROS ", "TAUX DE CONVERSION EUROS"}})
+				in
+				    #"Colonnes renommées"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
